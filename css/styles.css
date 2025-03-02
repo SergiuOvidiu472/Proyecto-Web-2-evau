@@ -1,36 +1,31 @@
-/* Reset básico para consistencia */
+/*---------------------------------------------------------------------------------------------*/
+/*Usado por todos los archivos html (Wolf3D, formulario, Doom, ...) */
+/*---------------------------------------------------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Estilos generales del cuerpo */
 body {
     font-family: 'Anton', sans-serif; /* Cambia por tu fuente local si la tienes */
     background-color: #1a1a1a; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     line-height: 1.6;
 }
-
-/* Encabezado */
 .header {
     background-color: #000; /* Negro puro */
     padding: 20px;
     text-align: center;
 }
-
 .logo {
     max-width: 200px; /* Ajusta según el tamaño de tu logo */
 }
-
 .nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
-
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -38,11 +33,9 @@ body {
     font-size: 18px;
     transition: color 0.3s; /* Efecto hover suave */
 }
-
 .nav a:hover {
     color: #ff0000; /* Rojo al pasar el ratón */
 }
-
 /* Secciones principales */
 .introduction, .game-info, .play-area {
     padding: 20px;
@@ -51,12 +44,10 @@ body {
     background-color: #333; /* Gris oscuro */
     border-radius: 5px;
 }
-
 /* Títulos */
 h1, h2 {
     color: #ff0000; /* Rojo para destacar */
 }
-
 /* Pie de página */
 .footer {
     text-align: center;
@@ -66,8 +57,9 @@ h1, h2 {
     bottom: 0;
     width: 100%;
 }
-
-/*ESTILO PARA EL IFRAME DE LOS JUEGOS*/
+/*---------------------------------------------------------------------------------------------*/
+/*DOOM*/
+/*---------------------------------------------------------------------------------------------*/
 /* Marco con efecto neón */
 .neon-frame {
     position: relative;
@@ -105,11 +97,20 @@ h1, h2 {
     background-color: #000; /* Fondo negro por si hay áreas vacías */
     border: none; /* Sin bordes adicionales */
 }
-
-
-/*ESTILOS PARA WOLF3D*/
-.juego {
+/*---------------------------------------------------------------------------------------------*/
+/*WOLF3D*/
+/*---------------------------------------------------------------------------------------------*/
+/*Body*/
+#WOLF3D {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Estilo de la ventana de juego*/
+#juegoW3D {
     border: none;
     width: 640px;
     height: 480px;
 }
+#contenidoW3D{
+    
+}
+/*---------------------------------------------------------------------------------------------*/

@@ -232,7 +232,37 @@ h1, h2 {
 .header, .header * {
     cursor: default !important;
 }
+/* Doom Slayer en el lateral izquierdo */
+.doom-slayer {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /* Centrar verticalmente */
+    z-index: 0; /* Para que las runas queden por encima */
+}
 
+.doom-slayer img {
+    max-height: 80vh; /* Limita la altura para que no se salga de la pantalla */
+    width: auto;
+    opacity: 0.8; /* Sutil transparencia para que no domine demasiado */
+    filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */
+}
+
+/* Cyber Demon en el lateral derecho */
+.cyber-demon {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); /* Centrar verticalmente */
+    z-index: 0; /* Para que las runas queden por encima */
+}
+
+.cyber-demon img {
+    max-height: 80vh; /* Limita la altura para que no se salga de la pantalla */
+    width: auto;
+    opacity: 0.8; /* Sutil transparencia */
+    filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */
+}
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/

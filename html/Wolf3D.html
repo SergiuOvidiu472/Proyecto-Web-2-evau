@@ -15,22 +15,20 @@
                 <!--Queda por poner el logo-->
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Doom.html">Doom</a></li>
-<<<<<<< HEAD
                 <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
                 <li><a href="Alice.html">Alice Madness</a></li>
-=======
-                <li><a href="Wolf3D.html" class=".active">Wolfenstein3D</a></li>
-                <li><a href="Alice.html"><span>Alice Madness</span></a></li>
                 <!--Aquí añadirás enlaces a las otras páginas más adelante-->
->>>>>>> 41d89412c58ecf10a35fdb57ef517209c8c676d4
             </ul>
         </nav>
     </div>
 
     <div id="indiceW3D">
-        <a href="#s1">1. El desarrollo de Wolfenstein</a>
-        </br>
-        <a href="#s2">2. El motor de Wolfenstein y el ray casting</a>
+        <ol>
+            <li><a href="#s1">El desarrollo de Wolfenstein</a></li>
+            <li><a href="#s2">El motor de Wolfenstein y el ray casting</a></li>
+            <li><a href="#s3">Code it yourself</a></li>
+            <li><a href="#s4">Juega a wolfestein</a></li>
+        </ol>
     </div>
 
     <div id="contenidoW3D">
@@ -51,23 +49,37 @@
             <p>El ray casting es una técnica de renderizado que traza "rayos" imaginarios desde la posición del
                 jugador hacia el entorno para determinar qué se ve en pantalla.
                 A diferencia de los motores 3D modernos, que calculan polígonos y
-                texturas complejas, el ray casting de Wolfenstein 3D trabajaba con un mapa
+                texturas complejas, el ray casting de Wolfenstein trabajaba con un mapa
                 2D simplificado (una cuadrícula) y proyectaba la ilusión de profundidad. </p>
         </section>
         <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="uwu">
         <section id="s3">
-            <h1>Mas detalles sobre el ray casting</h1>
-
+            <h1>CODE IT YOURSELF!</h1>
+            <p>Se puede crear un mapa 2D donde las paredes sean unos caracteres</p>
+            <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
+                del ray casting, desarrollando un juego ascii para terminal.
+            </p>
+            <p>Haz click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
         </section>
         <section id="s4">
-            <h1>CODE IT YOURSELF!</h1>
-            <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
-                del ray casting, desarrollando un juego para una terminal.
-            </p>
-            <p>Hay click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
+            <h1>Juega a wolfenstein</h1>
+            <p>Puedes jugar a wolfenstein aquí debajo.</p>
+            <section id="controles">
+                <p>Controles</p>
+                <p>
+                     - Te puedes mover usando las flechas del teclado
+                </p>
+                <p>
+                    - X -> Disparar </br>
+                    - Espacio -> Abrir puertas
+                </p>
+            </section>
         </section>
     </div>
 
-    <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
+    <div class="juegoW3D-container">
+        <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
+    </div>
+
 </body>
 </html>

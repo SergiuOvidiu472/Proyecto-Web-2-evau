@@ -151,11 +151,18 @@ h1, h2 {
 #WOLF3D {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-#indiceW3D {
-    
-}
-#contenidoW3D {
+#contenidoW3D section {
+    margin: 10px;
+    padding: 10px;
     border: 2px solid WHITE;
+    background-color:#1a1a1a;
+}
+#contenidoW3D section:hover {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid GRAY;
+    background-color:#333;
+    transition: color 0.3s;
 }
 #contenidoW3D h1 {
     font-family: monospace;

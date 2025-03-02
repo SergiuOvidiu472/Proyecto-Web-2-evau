@@ -9,8 +9,15 @@
 
     <body>
         <header class="header">
-            
-
+            <img src="../images/Alice.png" alt="Alice Logo" class="logo">
+            <nav class="nav">
+                <ul>
+                    <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Doom.html">Doom</a></li>
+                    <li><a href="Alice.html">Alice Madness</a></li>
+                  </ul>
+            </nav>
         </header>
     </body>
 </html>

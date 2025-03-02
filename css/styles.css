@@ -97,6 +97,53 @@ h1, h2 {
     background-color: #000; /* Fondo negro por si hay áreas vacías */
     border: none; /* Sin bordes adicionales */
 }
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Botones con efecto neón */
+.neon-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px #ff0000;
+}
+
+.neon-button:hover, .neon-button.active {
+    background-color: #ff0000;
+    color: #000;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* Historias */
+.game-stories {
+    margin-top: 20px;
+}
+
+.story {
+    padding: 15px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.story h3 {
+    color: #ff0000;
+}
+
+.hidden {
+    display: none;
+}
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/

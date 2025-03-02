@@ -232,12 +232,77 @@ h1, h2 {
 #WOLF3D {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+/*Indice*/
 #indiceW3D {
-    
+    background-color: dimgray;
+    border: 2px solid lightslategrey;
+    padding: 15px;
+    margin: 15px;
 }
-#contenidoW3D {
+#indiceW3D a {
+    font-size: 18px;
+    background-color: dimgray;
+    color:darkgray;
+    text-decoration: none;
+}
+/*Secciones*/
+#contenidoW3D section {
+    margin: 10px;
+    padding: 10px;
     border: 2px solid WHITE;
+    background-color:#1a1a1a;
+    text-align: justify;
+    font-size: 14pt;
+    transition: display 0.5s;
 }
+#contenidoW3D #s2 {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid WHITE;
+    background-color:#1a1a1a;
+    text-align: justify;
+    font-size: 14pt;
+    transition: display 0.5s;
+    overflow: hidden;
+}
+#contenidoW3D #s3 {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid WHITE;
+    background-color:#1a1a1a;
+    text-align: justify;
+    font-size: 14pt;
+    transition: display 0.5s;
+    overflow: hidden;
+}
+#uwu {
+    float: left;
+    width: 400px;
+    height: 144px;
+    margin-left: 50px;
+    margin-top: 50px;;
+}
+#contenidoW3D section:hover {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid GRAY;
+    background-color:#333;
+    transition: color 0.3s;
+    cursor: pointer;
+    display: block;
+}
+/*Enlaces*/
+#contenidoW3D a {
+    color: BLUE;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+#contenidoW3D a:hover {
+    color: GREEN;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+/*Encabezados*/
 #contenidoW3D h1 {
     font-family: monospace;
     color: WHITE;

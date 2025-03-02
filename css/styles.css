@@ -151,13 +151,21 @@ h1, h2 {
 #WOLF3D {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+#indiceW3D {
+    
+}
+#contenidoW3D {
+    border: 2px solid WHITE;
+}
+#contenidoW3D h1 {
+    font-family: monospace;
+    color: WHITE;
+    font-size: 24pt;
+}
 /*Estilo de la ventana de juego*/
 #juegoW3D {
     border: none;
     width: 640px;
     height: 480px;
-}
-#contenidoW3D{
-    
 }
 /*---------------------------------------------------------------------------------------------*/

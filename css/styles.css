@@ -14,17 +14,65 @@ body {
 }
 /* Encabezado */
 .header {
-    background-color: #000; /* Negro puro */
+    background: radial-gradient(circle, #111, #000);
+    background-size: 200% 200%;
     padding: 20px;
     text-align: center;
-    position: relative; /* Para efectos futuros */
+    position: relative;
+    animation: portalSpin 10s infinite linear;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    animation: portalGlow 3s infinite alternate;
+}
+@keyframes portalSpin {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 360% 360%; }
+}
+
+@keyframes portalGlow {
+    0% { opacity: 0.5; }
+    100% { opacity: 0.8; }
 }
 /* Cursor predeterminado en el encabezado */
 .header, .header * {
     cursor: default !important;
 }
 .logo {
-    max-width: 200px; /* Ajusta según el tamaño de tu logo */
+    max-width: 200px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 10px #ff4500);
+    animation: fireGlow 2s infinite alternate;
+}
+.logo::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.5), transparent);
+    opacity: 0.7;
+    animation: firePulse 1.5s infinite;
+}
+/*Animación encabezado*/
+@keyframes fireGlow {
+    0% { filter: drop-shadow(0 0 10px #ff4500); }
+    100% { filter: drop-shadow(0 0 20px #ff0000); }
+}
+
+@keyframes firePulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
 }
 .nav ul {
     list-style: none;

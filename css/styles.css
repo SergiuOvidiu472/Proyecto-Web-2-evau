@@ -255,7 +255,7 @@ h1, h2 {
     font-size: 14pt;
     transition: display 0.5s;
 }
-#contenidoW3D #s3 {
+#contenidoW3D #s4 {
     margin: 10px;
     margin-left: 512px;
     padding: 10px;
@@ -271,7 +271,7 @@ h1, h2 {
     width: 400px;
     height: 144px;
     margin-left: 50px;
-    margin-top: 10px;;
+    margin-top: 10px;
 }
 #contenidoW3D section:hover {
     margin: 10px;

@@ -187,11 +187,26 @@ h1, h2 {
 #WOLF3D {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+/*Indice*/
+#indiceW3D {
+    background-color: dimgray;
+    border: 2px solid lightslategrey;
+    padding: 15px;
+    margin: 15px;
+}
+#indiceW3D a {
+    font-size: 18px;
+    background-color: dimgray;
+    color:darkgray;
+    text-decoration: none;
+}
+/*Secciones*/
 #contenidoW3D section {
     margin: 10px;
     padding: 10px;
     border: 2px solid WHITE;
     background-color:#1a1a1a;
+    font-size: 14pt;
 }
 #contenidoW3D section:hover {
     margin: 10px;
@@ -199,7 +214,20 @@ h1, h2 {
     border: 2px solid GRAY;
     background-color:#333;
     transition: color 0.3s;
+    cursor: pointer;
 }
+/*Enlaces*/
+#contenidoW3D a {
+    color: BLUE;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+#contenidoW3D a:hover {
+    color: GREEN;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+/*Encabezados*/
 #contenidoW3D h1 {
     font-family: monospace;
     color: WHITE;

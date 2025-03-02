@@ -1,0 +1,514 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a0000;
+    color: #ff1a1a;
+    font-family: 'IM Fell English', serif; /* Fuente gótica para el resto del texto */
+    overflow-x: hidden;
+}
+
+/* Asegurarnos de que los párrafos y subtítulos también usen esta fuente */
+header p, .historia h2, .historia p, .juego h2, button, footer p {
+    font-family: 'IM Fell English', serif;
+}
+
+/* Cursor personalizado (espada o arma) */
+body {
+    cursor: url('https://i.imgur.com/5X5zX9k.png'), auto; /* Usa una imagen de espada o arma */
+}
+
+/* Fondo con animación de fuego más intensa */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1617058074336-221c74dbb7c1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover; /* Imagen de fuego o lava */
+    opacity: 0.3; /* Para que no opaque el contenido */
+    animation: fireBackground 10s infinite linear;
+    z-index: -1; /* Detrás de todo el contenido */
+}
+
+@keyframes fireBackground {
+    0% { transform: translateY(0); opacity: 0.3; }
+    50% { transform: translateY(-50px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 0.3; }
+}
+
+/* Header con animación de brillo y fuente gótica */
+header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(45deg, #ff0000, #660000);
+    box-shadow: 0 0 20px #ff1a1a;
+    animation: glow 2s infinite alternate;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), transparent);
+    animation: flamesHeader 3s infinite;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px #ff1a1a; }
+    100% { box-shadow: 0 0 50px #ff3333; }
+}
+
+@keyframes flamesHeader {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(-30px); opacity: 0.2; }
+    100% { transform: translateY(0); opacity: 0.6; }
+}
+
+h1 {
+    font-family: 'Ethnocentric', sans-serif; /* Fuente estilo Doom 2016 */
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a, 0 0 60px #ff3333;
+    animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    52% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+header p {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 1.5em;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+/* Sección de historia con efecto de llamas más agresivo */
+.historia {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para contraste */
+    position: relative;
+    margin: 20px;
+    border: 2px solid #ff1a1a;
+    box-shadow: 0 0 30px #ff0000;
+}
+
+.historia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.6), transparent);
+    animation: flames 2s infinite;
+    z-index: 0;
+}
+
+@keyframes flames {
+    0% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(-30px); opacity: 0.4; }
+    100% { transform: translateY(0); opacity: 0.8; }
+}
+
+.historia h2, .historia p {
+    position: relative;
+    z-index: 1;
+}
+
+.historia h2 {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #ff0000, 0 0 30px #ff1a1a;
+}
+
+.historia p {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* Sección del juego */
+.juego {
+    text-align: center;
+    padding: 40px;
+}
+
+#dosbox {
+    width: 640px;
+    height: 400px;
+    margin: 0 auto;
+    background: #000;
+    box-shadow: 0 0 20px #ff1a1a;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff1a1a;
+    border: none;
+    color: #fff;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+button:hover {
+    background: #ff3333;
+    box-shadow: 0 0 15px #ff1a1a;
+}
+
+/* Contenedor de partículas */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con la interacción */
+    z-index: 1; /* Encima del fondo, pero detrás del contenido */
+    overflow: hidden;
+}
+
+/* Crear partículas de ceniza o sangre */
+.particles::before,
+.particles::after,
+.particles span {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ff1a1a; /* Rojo sangre */
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: fall 5s infinite linear;
+}
+
+/* Distribuir las partículas en diferentes posiciones y retrasos */
+.particles::before {
+    left: 10%;
+    animation-delay: 0s;
+}
+.particles::after {
+    left: 30%;
+    animation-delay: 1s;
+}
+.particles span:nth-child(1) {
+    left: 50%;
+    animation-delay: 2s;
+}
+.particles span:nth-child(2) {
+    left: 70%;
+    animation-delay: 3s;
+}
+.particles span:nth-child(3) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #660000;
+    text-shadow: 0 0 10px #ff0000;
+    font-family: 'Uncial Antiqua', cursive;
+}
+
+h1::before, h2::before {
+    content: 'ᛋ'; /* Símbolo rúnico (puedes usar otro) */
+    position: absolute;
+    font-size: 2em;
+    color: #ff1a1a;
+    text-shadow: 0 0 20px #ff0000;
+    animation: floatRune 6s infinite;
+    left: -50px;
+    top: 0;
+}
+
+h1::after, h2::after {
+    content: 'ᛟ';
+    position: absolute;
+    font-size: 2em;
+    color: #ff1a1a;
+    text-shadow: 0 0 20px #ff0000;
+    animation: floatRune 6s infinite 2s;
+    right: -50px;
+    top: 0;
+}
+
+@keyframes floatRune {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
+}
+
+.doom-logo {
+    width: 400px; /* Ajusta según el tamaño del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 20px #ff0000) drop-shadow(0 0 40px #ff1a1a) drop-shadow(0 0 60px #ff3333);
+    animation: flicker 4s infinite;
+}
+
+/* Mantener las runas demoníacas alrededor del logo */
+.doom-logo::before {
+    content: 'ᛋ';
+    position: absolute;
+    font-size: 2em;
+    color: #ff1a1a;
+    text-shadow: 0 0 20px #ff0000;
+    animation: floatRune 6s infinite;
+    left: 20%;
+    top: 20px;
+}
+
+.doom-logo::after {
+    content: 'ᛟ';
+    position: absolute;
+    font-size: 2em;
+    color: #ff1a1a;
+    text-shadow: 0 0 20px #ff0000;
+    animation: floatRune 6s infinite 2s;
+    right: 20%;
+    top: 20px;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    52% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes floatRune {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
+}
+
+section, header, footer {
+    border: 2px solid #ff1a1a;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a;
+    animation: neonPulse 2s infinite;
+}
+
+@keyframes neonPulse {
+    0% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a; }
+    50% { box-shadow: 0 0 30px #ff0000, 0 0 60px #ff1a1a; }
+    100% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a; }
+}
+
+h2 {
+    font-family: 'IM Fell English', serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ffa500;
+    animation: burn 3s infinite;
+}
+
+@keyframes burn {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ffa500; }
+    50% { text-shadow: 0 0 15px #ff0000, 0 0 30px #ff4500, 0 0 40px #ffa500; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ffa500; }
+}
+
+footer p {
+    position: relative;
+    font-family: 'IM Fell English', serif;
+    font-size: 1.5em;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff0000;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.2), transparent 70%);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.doom-logo, header p {
+    position: relative;
+    z-index: 1;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, #ff1a1a, transparent);
+    animation: drip 2s infinite;
+}
+
+@keyframes drip {
+    0% { opacity: 1; height: 10px; }
+    50% { opacity: 0.5; height: 20px; }
+    100% { opacity: 1; height: 10px; }
+}
+
+/* Sección de los juegos de DOOM */
+.juegos-doom {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    margin: 20px;
+    border: 2px solid #ff1a1a;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a;
+    animation: neonPulse 2s infinite;
+}
+
+.juegos-doom h2 {
+    font-family: 'IM Fell English', serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ffa500;
+    animation: burn 3s infinite;
+}
+
+/* Contenedor de los botones */
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los botones con textura de piedra y runas */
+.boton-piedra {
+    padding: 15px 30px;
+    background: url('https://images.unsplash.com/photo-1529753253655-470be9a42781?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover; /* Placeholder: Reemplaza con una textura de piedra local */
+    background-color: #333; /* Color base si no hay textura */
+    border: 2px solid #ff1a1a;
+    color: #ff1a1a;
+    font-family: 'IM Fell English', serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff0000;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px #ff1a1a;
+}
+
+/* Runas rojas neón en los botones */
+.boton-piedra::before {
+    content: 'ᛒ';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 1.5em;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff1a1a;
+    animation: neonRune 2s infinite;
+}
+
+.boton-piedra::after {
+    content: 'ᛟ';
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 1.5em;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff1a1a;
+    animation: neonRune 2s infinite 1s;
+}
+
+@keyframes neonRune {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.boton-piedra:hover {
+    background-color: #444;
+    box-shadow: 0 0 20px #ff3333;
+    transform: scale(1.05);
+}
+
+/* Contenedor de las historias */
+.historias-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo de las historias */
+.historia-juego {
+    display: none; /* Ocultas por defecto */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff1a1a;
+    box-shadow: 0 0 20px #ff0000;
+    margin-top: 20px;
+}
+
+.historia-juego.active {
+    display: block; /* Mostrar cuando está activa */
+    animation: fadeIn 1s;
+}
+
+.historia-juego h3 {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.8em;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.historia-juego p {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.2em;
+    color: #ff1a1a;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

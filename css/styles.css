@@ -378,6 +378,7 @@ h1, h2 {
 
 #main-Alice {
     font-family: 'fuente-alice', sans-seriff;
+    cursor: url('../images/espada_vorpal.png'), auto;
 }
 
 /*---------------------------------------------------------------------------------------------*/

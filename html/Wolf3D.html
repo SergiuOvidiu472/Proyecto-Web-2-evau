@@ -23,11 +23,12 @@
     </div>
 
     <div id="indiceW3D">
-        <a href="#s1">1. El desarrollo de Wolfenstein</a>
-        </br>
-        <a href="#s2">2. El motor de Wolfenstein y el ray casting</a>
-        </br>
-        <a href="#s3">3. Code it yourself</a>
+        <ol>
+            <li><a href="#s1">El desarrollo de Wolfenstein</a></li>
+            <li><a href="#s2">El motor de Wolfenstein y el ray casting</a></li>
+            <li><a href="#s3">Code it yourself</a></li>
+            <li><a href="#s4">Juega a wolfestein</a></li>
+        </ol>
     </div>
 
     <div id="contenidoW3D">
@@ -52,15 +53,33 @@
                 2D simplificado (una cuadrícula) y proyectaba la ilusión de profundidad. </p>
         </section>
         <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="uwu">
-        <section id="s4">
+        <section id="s3">
             <h1>CODE IT YOURSELF!</h1>
+            <p>Se puede crear un mapa 2D donde las paredes sean unos caracteres</p>
             <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
-                del ray casting, desarrollando un juego para una terminal.
+                del ray casting, desarrollando un juego ascii para terminal.
             </p>
-            <p>Hay click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
+            <p>Haz click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
+        </section>
+        <section id="s4">
+            <h1>Juega a wolfenstein</h1>
+            <p>Puedes jugar a wolfenstein aquí debajo.</p>
+            <section id="controles">
+                <p>Controles</p>
+                <p>
+                     - Te puedes mover usando las flechas del teclado
+                </p>
+                <p>
+                    - X -> Disparar </br>
+                    - Espacio -> Abrir puertas
+                </p>
+            </section>
         </section>
     </div>
 
-    <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
+    <div class="juegoW3D-container">
+        <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
+    </div>
+
 </body>
 </html>

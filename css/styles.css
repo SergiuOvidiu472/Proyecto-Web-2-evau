@@ -247,10 +247,15 @@ h1, h2 {
     padding: 15px;
     margin: 15px;
 }
+#indiceW3D ol {
+    margin-left: 15px;
+    background-color: dimgray;
+    color:white;
+}
 #indiceW3D a {
     font-size: 18px;
-    background-color: dimgray;
-    color:darkgray;
+    background-color: inherit;
+    color: inherit;
     text-decoration: none;
 }
 /*Secciones*/
@@ -263,7 +268,7 @@ h1, h2 {
     font-size: 14pt;
     transition: display 0.5s;
 }
-#contenidoW3D #s4 {
+#contenidoW3D #s3 {
     margin: 10px;
     margin-left: 512px;
     padding: 10px;
@@ -290,6 +295,13 @@ h1, h2 {
     cursor: pointer;
     display: block;
 }
+#contenidoW3D #s3:hover {
+    border: 2px solid GRAY;
+    background-color:#333;
+    transition: color 0.3s;
+    cursor: pointer;
+    display: block;
+}
 /*Enlaces*/
 #contenidoW3D a {
     color: BLUE;
@@ -308,9 +320,30 @@ h1, h2 {
     font-size: 24pt;
 }
 /*Estilo de la ventana de juego*/
+.juegoW3D-container {
+    text-align: center;
+    padding: 20px;
+}
 #juegoW3D {
     border: none;
     width: 640px;
     height: 480px;
+    margin: 0 auto;
+    display: block;
 }
+/*---------------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*alice*/
+/*---------------------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'fuente-alice';
+    src: url('../fonts/Alice_in_Wonderland_3.ttf') format('woff2'),
+         url('../fonts/Alice_in_Wonderland_3.ttf') format('woff'),
+         url('../fonts/Alice_in_Wonderland_3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*---------------------------------------------------------------------------------------------*/

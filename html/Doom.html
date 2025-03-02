@@ -1,75 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doom - Videojuegos Favoritos</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
     <header class="header">
         <img src="../images/DOOM_TITLE.png" alt="Doom Logo" class="logo">
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Doom.html">Doom</a></li>
-                <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
-                <li><a href="Alice.html">Alice Madness</a></li>
+                <li><a href="index.html"><span>Inicio</span></a></li>
+                <li><a href="Doom.html" class=".active"><span>Doom</span></a></li>
+                <li><a href="Wolf3D.html"><span>Wolfenstein3D</span></a></li>
+                <li><a href="Alice.html"><span>Alice Madness</span></a></li>
                 <!-- Aquí añadirás enlaces a las otras páginas más adelante -->
             </ul>
         </nav>
     </header>
     <main>
-    <!-- Runas flotantes -->
-    <div class="runes left">
-        <img src="../images/Runas1.png" alt="Rune 1" class="rune">
-        <img src="../images/Runas2.png" alt="Rune 2" class="rune">
-        <img src="../images/Runas3.png" alt="Rune 3" class="rune">
-        <img src="../images/Runas4.png" alt="Rune 4" class="rune">
-    </div>
-    <div class="runes right">
-        <img src="../images/Runas1.png" alt="Rune 1" class="rune">
-        <img src="../images/Runas2.png" alt="Rune 2" class="rune">
-        <img src="../images/Runas3.png" alt="Rune 3" class="rune">
-        <img src="../images/Runas4.png" alt="Rune 4" class="rune">
-    </div>
+        <!-- Runas flotantes -->
+        <div class="runes left">
+            <img src="../images/Runas1.png" alt="Rune 1" class="rune">
+            <img src="../images/Runas2.png" alt="Rune 2" class="rune">
+            <img src="../images/Runas3.png" alt="Rune 3" class="rune">
+            <img src="../images/Runas4.png" alt="Rune 4" class="rune">
+        </div>
+        <div class="runes right">
+            <img src="../images/Runas1.png" alt="Rune 1" class="rune">
+            <img src="../images/Runas2.png" alt="Rune 2" class="rune">
+            <img src="../images/Runas3.png" alt="Rune 3" class="rune">
+            <img src="../images/Runas4.png" alt="Rune 4" class="rune">
+        </div>
         <section class="game-info">
-            <section class="game-info">
-                <h2>Historia de los Juegos</h2>
-                <div class="button-container">
-                    <button class="neon-button" data-game="doom1">Doom (1993)</button>
-                    <button class="neon-button" data-game="doom2">Doom II</button>
-                    <button class="neon-button" data-game="doom3">Doom 3</button>
-                    <button class="neon-button" data-game="doom2016">Doom (2016)</button>
-                    <button class="neon-button" data-game="doom-eternal">Doom Eternal</button>
-                    <button class="neon-button" data-game="doom-dark-ages">Doom: The Dark Ages</button>
+            <h2>Historia de los Juegos</h2>
+            <div class="button-container">
+                <button class="neon-button" data-game="doom1">Doom (1993)</button>
+                <button class="neon-button" data-game="doom2">Doom II</button>
+                <button class="neon-button" data-game="doom3">Doom 3</button>
+                <button class="neon-button" data-game="doom2016">Doom (2016)</button>
+                <button class="neon-button" data-game="doom-eternal">Doom Eternal</button>
+                <button class="neon-button" data-game="doom-dark-ages">Doom: The Dark Ages</button>
+            </div>
+            <div class="game-stories">
+                <div id="doom1" class="story hidden">
+                    <h3>Doom (1993)</h3>
+                    <p>El juego original, lanzado el 10 de diciembre de 1993, sigue a un marine espacial conocido como
+                        "Doomguy" que lucha contra hordas de demonios en una base de Marte tras un experimento fallido
+                        con portales infernales.</p>
                 </div>
-                <div class="game-stories">
-                    <div id="doom1" class="story hidden">
-                        <h3>Doom (1993)</h3>
-                        <p>El juego original, lanzado el 10 de diciembre de 1993, sigue a un marine espacial conocido como "Doomguy" que lucha contra hordas de demonios en una base de Marte tras un experimento fallido con portales infernales.</p>
-                    </div>
-                    <div id="doom2" class="story hidden">
-                        <h3>Doom II: Hell on Earth</h3>
-                        <p>Lanzado el 30 de septiembre de 1994, Doom II lleva la batalla a la Tierra, donde el Doomguy debe detener una invasión demoníaca tras sobrevivir a los eventos de Marte.</p>
-                    </div>
-                    <div id="doom3" class="story hidden">
-                        <h3>Doom 3</h3>
-                        <p>Publicado el 3 de agosto de 2004, este reinicio ofrece una experiencia más oscura y enfocada en el terror, con un marine enfrentándose a demonios en una instalación de investigación en Marte.</p>
-                    </div>
-                    <div id="doom2016" class="story hidden">
-                        <h3>Doom (2016)</h3>
-                        <p>Lanzado el 13 de mayo de 2016, este reinicio moderno trae de vuelta la acción frenética. El Doom Slayer despierta para detener una invasión demoníaca causada por experimentos con energía infernal.</p>
-                    </div>
-                    <div id="doom-eternal" class="story hidden">
-                        <h3>Doom Eternal</h3>
-                        <p>Publicado el 20 de marzo de 2020, Doom Eternal expande la historia del Doom Slayer, quien regresa a una Tierra devastada para enfrentarse a los ejércitos del Infierno y sus líderes celestiales.</p>
-                    </div>
-                    <div id="doom-dark-ages" class="story hidden">
-                        <h3>Doom: The Dark Ages</h3>
-                        <p>Anunciado en 2024 como una precuela, este juego (aún no lanzado en marzo de 2025) explorará los orígenes del Doom Slayer en un mundo medieval lleno de demonios y tecnología primitiva.</p>
-                    </div>
+                <div id="doom2" class="story hidden">
+                    <h3>Doom II: Hell on Earth</h3>
+                    <p>Lanzado el 30 de septiembre de 1994, Doom II lleva la batalla a la Tierra, donde el Doomguy debe
+                        detener una invasión demoníaca tras sobrevivir a los eventos de Marte.</p>
                 </div>
+                <div id="doom3" class="story hidden">
+                    <h3>Doom 3</h3>
+                    <p>Publicado el 3 de agosto de 2004, este reinicio ofrece una experiencia más oscura y enfocada en
+                        el terror, con un marine enfrentándose a demonios en una instalación de investigación en Marte.
+                    </p>
+                </div>
+                <div id="doom2016" class="story hidden">
+                    <h3>Doom (2016)</h3>
+                    <p>Lanzado el 13 de mayo de 2016, este reinicio moderno trae de vuelta la acción frenética. El Doom
+                        Slayer despierta para detener una invasión demoníaca causada por experimentos con energía
+                        infernal.</p>
+                </div>
+                <div id="doom-eternal" class="story hidden">
+                    <h3>Doom Eternal</h3>
+                    <p>Publicado el 20 de marzo de 2020, Doom Eternal expande la historia del Doom Slayer, quien regresa
+                        a una Tierra devastada para enfrentarse a los ejércitos del Infierno y sus líderes celestiales.
+                    </p>
+                </div>
+                <div id="doom-dark-ages" class="story hidden">
+                    <h3>Doom: The Dark Ages</h3>
+                    <p>Anunciado en 2024 como una precuela, este juego (aún no lanzado en marzo de 2025) explorará los
+                        orígenes del Doom Slayer en un mundo medieval lleno de demonios y tecnología primitiva.</p>
+                </div>
+            </div>
         </section>
         <section class="play-area">
             <h2>Juega al Doom Original</h2>

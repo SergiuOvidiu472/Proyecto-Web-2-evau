@@ -144,6 +144,42 @@ h1, h2 {
 .hidden {
     display: none;
 }
+
+/* Runas flotantes */
+.runes {
+    position: fixed;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.runes.left {
+    left: 30px;
+}
+
+.runes.right {
+    right: 30px;
+}
+
+.rune {
+    width: 40px; /* Ajusta según el tamaño de tus imágenes */
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #ff0000);
+    animation: float 10s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+.runes .rune:nth-child(2) { animation-delay: 1s; }
+.runes .rune:nth-child(3) { animation-delay: 2s; }
+
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/

@@ -3,85 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOOM - La Leyenda</title>
+    <title>Doom - Videojuegos Favoritos</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ethnocentric&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <div class="particles"></div>
-    <header>
-        <img src="../images/DOOM_TITLE.png" alt="DOOM Logo" class="doom-logo">
-        <p>La batalla eterna contra el infierno</p>
+    <header class="header">
+        <img src="../images/DOOM_TITLE.png" alt="Doom Logo" class="logo">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Doom.html">Doom</a></li>
+                <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
+                <!-- Aquí añadirás enlaces a las otras páginas más adelante -->
+            </ul>
+        </nav>
     </header>
-    <section class="historia">
-        <h2>La historia del Doom Slayer</h2>
-        <p>En un futuro distópico, la humanidad desata el poder del infierno...</p>
-    </section>
-    <section class="juego">
-        <h2>Juega al DOOM original</h2>
-        <div id="dosbox"></div>
-        <button onclick="dosbox.requestFullScreen();">Pantalla completa</button>
-    </section>
-    <section class="juegos-doom">
-        <h2>El legado de DOOM</h2>
-        <div class="botones-container">
-            <!-- Botón para DOOM (1993) -->
-            <button class="boton-piedra" data-target="historia-doom1">DOOM (1993)</button>
-            <!-- Botón para DOOM II -->
-            <button class="boton-piedra" data-target="historia-doom2">DOOM II</button>
-            <!-- Botón para DOOM (2016) -->
-            <button class="boton-piedra" data-target="historia-doom2016">DOOM (2016)</button>
-            <!-- Botón para DOOM Eternal -->
-            <button class="boton-piedra" data-target="historia-doom-eternal">DOOM Eternal</button>
-        </div>
-        <!-- Contenedor para las historias -->
-        <div class="historias-container">
-            <div id="historia-doom1" class="historia-juego">
-                <h3>DOOM (1993)</h3>
-                <p>Eres un marine espacial enviado a Marte, donde un experimento con portales desata el infierno. Luchas contra hordas de demonios usando armas icónicas como la BFG, mientras intentas cerrar los portales y salvar a la humanidad.</p>
-            </div>
-            <div id="historia-doom2" class="historia-juego">
-                <h3>DOOM II</h3>
-                <p>Tras los eventos del primer juego, los demonios invaden la Tierra. Como el Doom Slayer, regresas para detener la invasión, enfrentándote a nuevos enemigos como el Arch-vile y explorando niveles más complejos.</p>
-            </div>
-            <div id="historia-doom2016" class="historia-juego">
-                <h3>DOOM (2016)</h3>
-                <p>Un reinicio moderno donde el Doom Slayer despierta en una instalación de la UAC en Marte. La energía infernal ha desatado el caos, y debes detener a Olivia Pierce y su culto, mientras descubres tu antigua conexión con los demonios.</p>
-            </div>
-            <div id="historia-doom-eternal" class="historia-juego">
-                <h3>DOOM Eternal</h3>
-                <p>La Tierra ha sido invadida por demonios liderados por los Hell Priests. Como el Doom Slayer, viajas entre dimensiones para detener la invasión, enfrentándote a enemigos más feroces y usando nuevas habilidades como el dash y el gancho.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>¡Rip and Tear!</p>
+    <main>
+        <section class="introduction">
+            <h1>La Serie Doom</h1>
+            <p>Doom es una icónica serie de videojuegos de disparos en primera persona que revolucionó el género desde su debut en 1993. Con una atmósfera infernal y acción frenética, sigue siendo un referente hasta hoy.</p>
+        </section>
+        <section class="game-info">
+            <h2>Doom (1993)</h2>
+            <p>El juego original que lo empezó todo. Lanzado el 10 de diciembre de 1993, sigue a un marine luchando contra demonios en Marte.</p>
+        </section>
+        <!-- Añade más secciones como esta para otros juegos: Doom II, Doom 3, Doom (2016), Doom Eternal, etc. -->
+        <section class="play-area">
+            <h2>Juega al Doom Original</h2>
+            <p>Aquí podrás disfrutar del Doom de 1993 directamente en tu navegador.</p>
+            <!-- Aquí irá el emulador o enlace, lo configuraremos después -->
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 - Proyecto de Lenguajes de Marcas</p>
     </footer>
-    <script src="https://js-dos.com/cdn/js-dos-api.js"></script>
-    <script>
-        var dosbox = new Dosbox({
-            id: "dosbox",
-            onload: function (dosbox) {
-                dosbox.run("https://js-dos.com/cdn/DOOM.zip", "./doom");
-            }
-        });
-    </script>
-    <script>
-        const botones = document.querySelectorAll('.boton-piedra');
-        const historias = document.querySelectorAll('.historia-juego');
-    
-        botones.forEach(boton => {
-            boton.addEventListener('click', () => {
-                // Ocultar todas las historias
-                historias.forEach(historia => historia.classList.remove('active'));
-                // Mostrar la historia correspondiente
-                const target = boton.getAttribute('data-target');
-                document.getElementById(target).classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>

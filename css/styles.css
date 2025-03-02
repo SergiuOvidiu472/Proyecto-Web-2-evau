@@ -12,10 +12,12 @@ body {
     color: #fff; /* Texto blanco */
     line-height: 1.6;
 }
+/* Encabezado */
 .header {
     background-color: #000; /* Negro puro */
     padding: 20px;
     text-align: center;
+    position: relative; /* Para efectos futuros */
 }
 .logo {
     max-width: 200px; /* Ajusta según el tamaño de tu logo */
@@ -31,10 +33,38 @@ body {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
-    transition: color 0.3s; /* Efecto hover suave */
+    position: relative; /* Para el subrayado */
+    transition: color 0.3s ease; /* Suavizar el cambio de color */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
-.nav a:hover {
-    color: #ff0000; /* Rojo al pasar el ratón */
+.nav a span {
+    position: relative;
+    z-index: 1; /* Mantener el texto sobre el subrayado */
+}
+/* Efecto de subrayado animado */
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Espacio bajo el texto */
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #ff0000, #ff4500); /* Gradiente rojo-naranja */
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px #ff0000;
+}
+/* Efecto hover */
+.nav a:hover::after, .nav a.active::after {
+    width: 100%;
+}
+/* Efecto de brillo y pulso */
+.nav a:hover, .nav a.active {
+    color: #ff0000; /* Color rojo brillante */
+    text-shadow: 
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 30px #ff0000;
+    animation: pulseGlow 0.5s ease-in-out infinite alternate;
 }
 /* Secciones principales */
 .introduction, .game-info, .play-area {
@@ -43,6 +73,21 @@ body {
     max-width: 800px; /* Ancho máximo para legibilidad */
     background-color: #333; /* Gris oscuro */
     border-radius: 5px;
+}
+/* Animación de pulso */
+@keyframes pulseGlow {
+    from {
+        text-shadow: 
+            0 0 10px #ff0000,
+            0 0 20px #ff0000,
+            0 0 30px #ff0000;
+    }
+    to {
+        text-shadow: 
+            0 0 15px #ff0000,
+            0 0 30px #ff0000,
+            0 0 50px #ff0000;
+    }
 }
 /* Títulos */
 h1, h2 {

@@ -255,7 +255,7 @@ h1, h2 {
     font-size: 14pt;
     transition: display 0.5s;
 }
-#contenidoW3D #s4 {
+#contenidoW3D #s3 {
     margin: 10px;
     margin-left: 512px;
     padding: 10px;
@@ -282,6 +282,13 @@ h1, h2 {
     cursor: pointer;
     display: block;
 }
+#contenidoW3D #s3:hover {
+    border: 2px solid GRAY;
+    background-color:#333;
+    transition: color 0.3s;
+    cursor: pointer;
+    display: block;
+}
 /*Enlaces*/
 #contenidoW3D a {
     color: BLUE;
@@ -300,9 +307,15 @@ h1, h2 {
     font-size: 24pt;
 }
 /*Estilo de la ventana de juego*/
+.juegoW3D-container {
+    text-align: center;
+    padding: 20px;
+}
 #juegoW3D {
     border: none;
     width: 640px;
     height: 480px;
+    margin: 0 auto;
+    display: block;
 }
 /*---------------------------------------------------------------------------------------------*/

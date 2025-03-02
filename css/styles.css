@@ -286,15 +286,15 @@ h1, h2 {
 }
 /* Doom Slayer en el lateral izquierdo */
 .doom-slayer {
-    position: fixed;
-    top: 50%;
+    position:fixed;
+    top: 65%;
     left: 0;
     transform: translateY(-50%); /* Centrar verticalmente */
     z-index: 0; /* Para que las runas queden por encima */
 }
 
 .doom-slayer img {
-    max-height: 80vh; /* Limita la altura para que no se salga de la pantalla */
+    max-height: 60vh; /* Limita la altura para que no se salga de la pantalla */
     width: auto;
     opacity: 0.8; /* Sutil transparencia para que no domine demasiado */
     filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */
@@ -303,14 +303,14 @@ h1, h2 {
 /* Cyber Demon en el lateral derecho */
 .cyber-demon {
     position: fixed;
-    top: 50%;
+    top: 65%;
     right: 0;
     transform: translateY(-50%); /* Centrar verticalmente */
     z-index: 0; /* Para que las runas queden por encima */
 }
 
 .cyber-demon img {
-    max-height: 80vh; /* Limita la altura para que no se salga de la pantalla */
+    max-height: 60vh; /* Limita la altura para que no se salga de la pantalla */
     width: auto;
     opacity: 0.8; /* Sutil transparencia */
     filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */

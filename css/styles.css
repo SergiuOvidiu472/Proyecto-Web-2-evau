@@ -280,6 +280,10 @@ h1, h2 {
 .doom-page {
     cursor: url('../images/cursor_doom.png') 0 0, auto;
 }
+/* Cursor para el estado de clic en la página de Doom */
+.doom-page *:active {
+    cursor: url('../images/clickerDoom.png') 0 0, auto !important;
+}
 /* Doom Slayer en el lateral izquierdo */
 .doom-slayer {
     position: fixed;

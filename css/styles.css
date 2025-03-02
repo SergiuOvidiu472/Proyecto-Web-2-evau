@@ -19,6 +19,10 @@ body {
     text-align: center;
     position: relative; /* Para efectos futuros */
 }
+/* Cursor predeterminado en el encabezado */
+.header, .header * {
+    cursor: default !important;
+}
 .logo {
     max-width: 200px; /* Ajusta según el tamaño de tu logo */
 }
@@ -227,10 +231,6 @@ h1, h2 {
 /* Cursor personalizado solo para la página de Doom */
 .doom-page {
     cursor: url('../images/cursor_doom.png') 0 0, auto;
-}
-/* Cursor predeterminado en el encabezado */
-.header, .header * {
-    cursor: default !important;
 }
 /* Doom Slayer en el lateral izquierdo */
 .doom-slayer {

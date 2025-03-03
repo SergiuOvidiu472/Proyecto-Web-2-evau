@@ -125,7 +125,6 @@ body {
     max-width: 800px; /* Ancho máximo para legibilidad */
     background-color: #333; /* Gris oscuro */
     border-radius: 5px;
-    flex-direction: column; /* Asegura que el h2 quede arriba */
 }
 /* Animación de pulso */
 @keyframes pulseGlow {
@@ -331,13 +330,6 @@ h1, h2 {
 .doom-page *:active {
     cursor: url('../images/clickerDoom.png') 0 0, auto !important;
 }
-/*Cursor para el Pointer*/
-.doom-page .neon-button:hover{
-    cursor: url('../images/PointerDoom.png') 0 0, pointer;
-}
-.doom-page .nav a:hover {
-    cursor: url('../images/PointerDoom.png') 0 0, pointer;
-}
 /* Doom Slayer en el lateral izquierdo */
 .doom-slayer {
     position:fixed;
@@ -499,7 +491,13 @@ h1, h2 {
 }
 
 .texto-Alice {
-    display: flex; /* Hace que el texto y la imagen se alineen en fila */
-    color: white; /* Color del texto */
+    flex: 1;
+    color: #fff;
+}
+
+.contenido-Alice {
+    display: flex; /* Usamos flex para que el contenido se acomode dinámicamente */
+    align-items: flex-start;
+    gap: 15px;
 }
 /*---------------------------------------------------------------------------------------------*/

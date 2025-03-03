@@ -430,11 +430,16 @@ h1, h2 {
 
 #main-Alice {
     font-family: 'fuente-alice', sans-seriff;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #body-alice {
     cursor: url('../images/espada_vorpal.png'), auto;
 }
 
+.imagen-Alice {
+    float: left;
+    margin-right: 15px;
+    width: 200px;
+}
 /*---------------------------------------------------------------------------------------------*/

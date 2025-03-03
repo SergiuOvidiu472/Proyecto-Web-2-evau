@@ -371,32 +371,62 @@ h1, h2 {
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/
+/*Fuentes*/
+@font-face {
+    font-family: "Jersey 20";
+    src: url('../fonts/Jersey_20/Jersey20-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 /*Indice*/
 #indiceW3D {
     margin: 10px;
     padding: 15px;
-    padding-left: 15px;
+    padding-left: 25px;
     border: 2px solid white;
 }
-#indiceW3D ol {
-    padding-left: 15px;
-}
-#indiceW3D a,#WOLF3D h1{
+/*Enlaces*/
+#WOLF3D a{
     text-decoration: none;
     color:#fff;
 }
-/*Seccion del contenido y articulos*/
-#W3D section {
-    margin: 5px;
-    padding: 5px;
-    position: relative;
-}
+/*Articulos*/
 #W3D article {
     position: inherit;
-    margin-bottom: 15px;
-    padding: 5px;
-    border: 2px solid white;
+    margin: 10px;
+    padding: 15px;
+    font-family: "Jersey 20";
+    font-size: 21pt;
+
+    border-left: 10px solid #FF6600;
+    border-right: 10px solid #FF6600;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+#W3D article p{
+    display: block;
+    color: WHITE;
+    padding: 40px;
+    margin: -10px 0;
+    border-top: 10px solid #FF6600;
+    border-bottom: 10px solid #FF6600;
+}
+#W3D article::before,
+#W3D article p::before,
+#W3D article p::after{
+content: '';
+width: 10px;
+height: 10px;
+display: block;
+position: absolute;
+background: #FF6600;
+}
+#W3D article::before{ top: -5px; left: -5px; }
+#W3D article::after{ top: -5px; right: -5px; }
+#W3D article p::before{ bottom: -5px; left: -5px; }
+#W3D article p::after{ bottom: -5px; right: -5px; }
 /*Iluminacion*/
 #W3D #luz::after {
     content: "";

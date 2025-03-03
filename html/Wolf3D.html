@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>Wolfenstein 3D</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href='../css/styles.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Wolfenstein 3D</title>
 </head>
 <body id="WOLF3D">
     
@@ -12,73 +12,68 @@
         <img src="../images/W_logo.png" alt="Doom Logo" class="logo">
         <nav class="nav">
             <ul>
-                <!--Queda por poner el logo-->
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Doom.html">Doom</a></li>
                 <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
                 <li><a href="Alice.html">Alice Madness</a></li>
-                <!--Aquí añadirás enlaces a las otras páginas más adelante-->
             </ul>
         </nav>
     </div>
 
     <div id="indiceW3D">
         <ol>
-            <li><a href="#s1">El desarrollo de Wolfenstein</a></li>
-            <li><a href="#s2">El motor de Wolfenstein y el ray casting</a></li>
-            <li><a href="#s3">Code it yourself</a></li>
-            <li><a href="#s4">Juega a wolfestein</a></li>
+            <li><a href="#s1">¿Qué es Wolfenstein?</a></li>
+            <li><a href="#s2">¿Que es el ray casting?</a></li>
+            <li><a href="#s3">CODE IT YOURSELF!</a></li>
+            <li><a href="#s4">Juega Wolfenstein</a></li>
         </ol>
     </div>
 
-    <div id="contenidoW3D">
-        <section id="s1">
-            <h1>Desarrollo de Wolfenstein</h1>
-            <p>Wolfenstein fue lanzado en mayo de 1992 por id Software, es considerado uno de los pioneros de los videojuegos de disparos en primera persona (FPS).</p>
-            <p>id Software venía de trabajar en Hovertank 3D (1991) y Catacomb 3-D (1991), dos títulos que ya experimentaban con gráficos en 3D rudimentarios.
-            Sin embargo, Wolfenstein 3D fue un salto cualitativo gracias a la visión de John Carmack,
-            quien quería un juego rápido, inmersivo y accesible para las PCs de la época
-            (principalmente con procesadores 286 y 386).</p>
-        </section>
-        <section id="s2">
-            <h1>El motor de Wolfenstein 3D y el ray casting</h1>
-            <p>El corazón de Wolfenstein 3D es su motor gráfico, diseñado por John Carmack.</p>
-            <p>Este motor usaba una técnica conocida como ray casting para simular un entorno tridimensional, 
-                aunque en realidad era un truco ingenioso que no requería un cálculo completo en 3D, 
-                lo que lo hacía viable en hardware limitado.</p>
-            <p>El ray casting es una técnica de renderizado que traza "rayos" imaginarios desde la posición del
-                jugador hacia el entorno para determinar qué se ve en pantalla.
-                A diferencia de los motores 3D modernos, que calculan polígonos y
-                texturas complejas, el ray casting de Wolfenstein trabajaba con un mapa
-                2D simplificado (una cuadrícula) y proyectaba la ilusión de profundidad. </p>
-        </section>
-        <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="uwu">
-        <section id="s3">
-            <h1>CODE IT YOURSELF!</h1>
-            <p>Se puede crear un mapa 2D donde las paredes sean unos caracteres</p>
-            <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
-                del ray casting, desarrollando un juego ascii para terminal.
-            </p>
-            <p>Haz click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
-        </section>
-        <section id="s4">
-            <h1>Juega a wolfenstein</h1>
-            <p>Puedes jugar a wolfenstein aquí debajo.</p>
-            <section id="controles">
-                <p>Controles</p>
+    <div id="W3D">
+        <div id="luz"></div>
+        <section>
+            <article>
+                <header>Que es Wolfenstein3D</header>
                 <p>
-                     - Te puedes mover usando las flechas del teclado
+                Wolfenstein es considerado uno de los pioneros de los videojuegos de disparos en primera persona (FPS).
+                Fue lanzado en mayo de 1992 por id Software que venía de trabajar en Hovertank 3D (1991) y Catacomb 3-D (1991), dos títulos que ya experimentaban con gráficos en 3D rudimentarios.
+                Sin embargo, Wolfenstein 3D fue un salto cualitativo gracias a la visión de John Carmack,
+                quien quería un juego rápido, inmersivo y accesible para las PCs de la época, que principalmente implementaban procesadores 286 y 386.
+                Para ello, se utilizó el "ray casting" como el método de renderizado del juego.
+    
                 </p>
+            </article>
+            <article>
+                <header>¿Que es el ray casting?</header>
                 <p>
-                    - X -> Disparar </br>
-                    - Espacio -> Abrir puertas
+                    El ray casting es una técnica para crear proyecciones 3D basados en un plano 2D, que es un array de unos y ceros, 
+                    donde los unos son paredes y los ceros son espacios vacíos.
+                    Se guarda el campo de vision del jugador, su posicion en ese array, y su direccion de desplazamiento.
+                    Para cada ciclo del programa, se 'lanzan rayos' desde el campo de vision del jugador en su direccion,
+                    y se espera a que cada rayo colisione con una pared (cualquier 1 del array).
+                    Se guarda la longitud de cada rayo y en base a eso, se renderizarán las paredes de una manera u otra
+                    generando una impresión de profundidad.
                 </p>
-            </section>
+            </article>
+            <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="uwu">
+            <article>
+                <header>CODE IT YOURSELF!</header>
+                <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
+                    del ray casting, desarrollando un juego ascii para terminal.
+                </p>
+                <p>Haz click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
+            </article>
+            <article>
+                <header>Juega a wolfenstein</header>
+                <p>Puedes jugar a wolfenstein aquí debajo.</p>
+            </article>
         </section>
-    </div>
-
-    <div class="juegoW3D-container">
-        <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
+        <section>
+            <p>Controles</p>
+        </section>
+        <section class="juegoW3D-container">
+            <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
+        </section>
     </div>
 
 </body>

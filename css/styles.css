@@ -364,94 +364,45 @@ h1, h2 {
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/
-/*Body*/
-#WOLF3D {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
 /*Indice*/
 #indiceW3D {
-    background-color: dimgray;
-    border: 2px solid lightslategrey;
+    margin: 10px;
     padding: 15px;
-    margin: 15px;
+    padding-left: 15px;
+    border: 2px solid white;
 }
 #indiceW3D ol {
-    margin-left: 15px;
-    background-color: dimgray;
-    color:white;
+    padding-left: 15px;
 }
-#indiceW3D a {
-    font-size: 18px;
-    background-color: inherit;
-    color: inherit;
+#indiceW3D a,#WOLF3D h1{
     text-decoration: none;
+    color:#fff;
 }
-/*Secciones*/
-#contenidoW3D section {
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid WHITE;
-    background-color:#1a1a1a;
-    text-align: justify;
-    font-size: 14pt;
-    transition: display 0.5s;
+/*Seccion del contenido y articulos*/
+#W3D section {
+    margin: 5px;
+    padding: 5px;
+    position: relative;
 }
-#contenidoW3D #s3 {
-    margin: 10px;
-    margin-left: 512px;
-    padding: 10px;
-    border: 2px solid WHITE;
-    background-color:#1a1a1a;
-    text-align: justify;
-    font-size: 14pt;
-    transition: display 0.5s;
-    overflow: hidden;
+#W3D article {
+    position: inherit;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 2px solid white;
 }
-#uwu {
-    float: left;
-    width: 400px;
-    height: 144px;
-    margin-left: 50px;
-    margin-top: 10px;
+/*Iluminacion*/
+#W3D #luz::after {
+    content: "";
+  position: absolute;
+  inset: 25px;
+  background:
+    radial-gradient(900px at left  0px top 0px,#ff53bb 100%,#0000),
+    radial-gradient(900px at right 0px bottom 0px,#00f8d3 100%,#0000);
+  filter: blur(400px);
+  opacity: .40;
+    z-index: -1;
 }
-#contenidoW3D section:hover {
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid GRAY;
-    background-color:#333;
-    transition: color 0.3s;
-    cursor: default;
-    display: block;
-}
-#contenidoW3D #s3:hover {
-    border: 2px solid GRAY;
-    background-color:#333;
-    transition: color 0.3s;
-    cursor: default;
-    display: block;
-}
-/*Enlaces*/
-#contenidoW3D a {
-    color: BLUE;
-    transition: color 0.2s;
-    cursor: pointer;
-}
-#contenidoW3D a:hover {
-    color: GREEN;
-    transition: color 0.3s;
-    cursor: pointer;
-}
-/*Encabezados*/
-#contenidoW3D h1 {
-    font-family: monospace;
-    color: WHITE;
-    font-size: 24pt;
-}
-/*Estilo de la ventana de juego*/
-.juegoW3D-container {
-    text-align: center;
-    padding: 20px;
-}
+/*iFrame juego*/
 #juegoW3D {
     border: none;
     width: 640px;
@@ -459,6 +410,7 @@ h1, h2 {
     margin: 0 auto;
     display: block;
 }
+
 /*---------------------------------------------------------------------------------------------*/
 
 

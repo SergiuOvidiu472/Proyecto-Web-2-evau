@@ -395,24 +395,41 @@ h1, h2 {
 #W3D article {
     position: inherit;
     margin: 10px;
-    padding: 15px;
+    padding: 20px;
     font-family: "Jersey 20";
     font-size: 18pt;
     
-    border: 3px groove WHITE;
-    border-radius: 0px;
-    box-shadow: -5px 8px 0px 0px rgba(0, 0, 0, 1);
+    background: #1a1a1abb;
+
+    border: 3px groove rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: -5px 8px 0px 0px #1a1a1a;
+}
+#W3D article header {
+    position: inherit;
+    font-family: "Jersey 20";
+    font-size: 20pt;
+    text-align: center;
+    
+    color: white;
+    background: #1a1a1a;
+    border: 3px solid #1a1a1a;
+    border-radius: 10px;
+}
+#W3D section img{
+    position: block;
+    margin: 15px;
 }
 /*Iluminacion*/
 #W3D #luz::after {
     content: "";
   position: absolute;
-  inset: 10px;
+  inset: 20px;
   background:
     radial-gradient(900px at left  0px top 0px,#ff53bb 100%,#0000),
     radial-gradient(900px at right 900px top 900px,#00f8d3 100%,#0000);
-  filter: blur(400px);
-  opacity: .40;
+  filter: blur(300px);
+  opacity: .50;
     z-index: -1;
 }
 /*iFrame juego*/

@@ -22,16 +22,16 @@
 
     <div id="indiceW3D">
         <ol>
-            <li><a href="#s1">¿Qué es Wolfenstein?</a></li>
-            <li><a href="#s2">¿Que es el ray casting?</a></li>
-            <li><a href="#s3">CODE IT YOURSELF!</a></li>
-            <li><a href="#s4">Juega Wolfenstein</a></li>
+            <li><a href="#a1">¿Qué es Wolfenstein?</a></li>
+            <li><a href="#a2">¿Que es el ray casting?</a></li>
+            <li><a href="#a3">CODE IT YOURSELF!</a></li>
+            <li><a href="#a4">Juega Wolfenstein</a></li>
         </ol>
     </div>
 
     <div id="W3D">
         <section>
-            <article>
+            <article id="a1">
                 <header>Que es Wolfenstein3D</header>
                 <p>
                 Wolfenstein es considerado uno de los pioneros de los videojuegos de disparos en primera persona (FPS).
@@ -39,24 +39,22 @@
                 Sin embargo, Wolfenstein 3D fue un salto cualitativo gracias a la visión de John Carmack,
                 quien quería un juego rápido, inmersivo y accesible para las PCs de la época, que principalmente implementaban procesadores 286 y 386.
                 Para ello, se utilizó el "ray casting" como el método de renderizado del juego.
-    
                 </p>
             </article>
             
-            <article>
+            <article id="a2">
                 <header>¿Que es el ray casting?</header>
                 <p>
-                    El ray casting es una técnica para crear proyecciones 3D basados en un plano 2D, que es un array de unos y ceros, 
+                    El ray casting es una técnica para crear proyecciones 3D basadas en un plano 2D, que es un array de unos y ceros, 
                     donde los unos son paredes y los ceros son espacios vacíos.
-                    Se guarda el campo de vision del jugador, su posicion en ese array, y su direccion de desplazamiento.
-                    Para cada ciclo del programa, se 'lanzan rayos' desde el campo de vision del jugador en su direccion,
+                    Se 'lanzan rayos' desde el campo de vision del jugador en su direccion,
                     y se espera a que cada rayo colisione con una pared (cualquier 1 del array).
                     Se guarda la longitud de cada rayo y en base a eso, se renderizarán las paredes de una manera u otra
                     generando una impresión de profundidad.
                 </p>
             </article>
             <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="uwu">
-            <article>
+            <article id="a3">
                 <header>CODE IT YOURSELF!</header>
                 <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
                     del ray casting, desarrollando un juego ascii para terminal.
@@ -64,7 +62,7 @@
                 <p>Haz click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
             </article>
             <div id="luz"></div>
-            <article>
+            <article id="a4">
                 <header>Juega a wolfenstein</header>
                 <p>Puedes jugar a wolfenstein aquí debajo.</p>
             </article>

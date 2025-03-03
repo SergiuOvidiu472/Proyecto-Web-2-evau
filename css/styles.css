@@ -383,8 +383,21 @@ h1, h2 {
 #indiceW3D {
     margin: 10px;
     padding: 15px;
-    padding-left: 25px;
+    padding-left: 50px;
     border: 2px solid white;
+
+    position: inherit;
+    font-family: "Jersey 20";
+    font-size: 21pt;
+    
+    background: #1a1a1a;
+    border-radius: 3px;
+
+
+    /*
+    border: 3px groove rgb(255, 255, 255);
+    box-shadow: -5px 8px 0px 0px #1a1a1a;*/
+
 }
 /*Enlaces*/
 #WOLF3D a{
@@ -415,6 +428,12 @@ h1, h2 {
     background: #1a1a1a;
     border: 3px solid #1a1a1a;
     border-radius: 10px;
+}
+#W3D #a3 a {
+    color: RED;
+}
+#W3D #a3 a:hover {
+    color: GREEN;
 }
 #W3D section img{
     position: block;

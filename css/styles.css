@@ -125,6 +125,7 @@ body {
     max-width: 800px; /* Ancho máximo para legibilidad */
     background-color: #333; /* Gris oscuro */
     border-radius: 5px;
+    flex-direction: column; /* Asegura que el h2 quede arriba */
 }
 /* Animación de pulso */
 @keyframes pulseGlow {
@@ -487,5 +488,11 @@ h1, h2 {
     float: left;
     margin-right: 15px;
     width: 200px;
+    height: auto;
+}
+
+.texto-Alice {
+    display: flex; /* Hace que el texto y la imagen se alineen en fila */
+    color: white; /* Color del texto */
 }
 /*---------------------------------------------------------------------------------------------*/

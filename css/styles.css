@@ -407,7 +407,7 @@ h1, h2 {
 /*Articulos*/
 #W3D article {
     position: inherit;
-    margin: 10px;
+    margin: 15px;
     padding: 20px;
     font-family: "Jersey 20";
     font-size: 18pt;
@@ -436,8 +436,13 @@ h1, h2 {
     color: GREEN;
 }
 #W3D section img{
-    position: block;
-    margin: 15px;
+    padding: inherit;
+    margin:auto;
+    display: block;
+
+    border: 5px groove #adadadbb;
+    border-radius: 5px;
+    box-shadow: -5px 8px 0px 0px #1a1a1a;
 }
 /*Iluminacion*/
 #W3D #luz::after {

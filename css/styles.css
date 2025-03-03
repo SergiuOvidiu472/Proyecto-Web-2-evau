@@ -240,17 +240,37 @@ h1, h2 {
 .game-stories {
     margin-top: 20px;
 }
-
+/*Cuadros de historia*/
 .story {
     padding: 15px;
     background-color: #222;
     border-radius: 5px;
+    animation: neonPulse 1.5s infinite alternate;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff4500;
+    transition: transform 0.1s ease-in-out;
 }
-
+.story:hover {
+    animation: shake 0.5s;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+@keyframes neonPulse {
+    from {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff4500;
+    }
+    to {
+        box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff4500;
+    }
+}
 .story h3 {
     color: #ff0000;
     font-family: 'MetalMania';
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .hidden {
@@ -264,7 +284,7 @@ h1, h2 {
 /*Subtítulos Doom*/
 .SubDoom p {
     font-family: 'Cinzel';
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* Runas flotantes */

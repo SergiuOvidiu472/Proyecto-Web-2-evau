@@ -330,6 +330,13 @@ h1, h2 {
 .doom-page *:active {
     cursor: url('../images/clickerDoom.png') 0 0, auto !important;
 }
+/*Cursor para el Pointer*/
+.doom-page .neon-button:hover{
+    cursor: url('../images/PointerDoom.png') 0 0, pointer;
+}
+.doom-page .nav a:hover {
+    cursor: url('../images/PointerDoom.png') 0 0, pointer;
+}
 /* Doom Slayer en el lateral izquierdo */
 .doom-slayer {
     position:fixed;

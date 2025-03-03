@@ -397,44 +397,20 @@ h1, h2 {
     margin: 10px;
     padding: 15px;
     font-family: "Jersey 20";
-    font-size: 21pt;
-
-    border-left: 10px solid #FF6600;
-    border-right: 10px solid #FF6600;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    font-size: 18pt;
+    
+    border: 3px groove WHITE;
+    border-radius: 0px;
+    box-shadow: -5px 8px 0px 0px rgba(0, 0, 0, 1);
 }
-#W3D article p{
-    display: block;
-    color: WHITE;
-    padding: 40px;
-    margin: -10px 0;
-    border-top: 10px solid #FF6600;
-    border-bottom: 10px solid #FF6600;
-}
-#W3D article::before,
-#W3D article p::before,
-#W3D article p::after{
-content: '';
-width: 10px;
-height: 10px;
-display: block;
-position: absolute;
-background: #FF6600;
-}
-#W3D article::before{ top: -5px; left: -5px; }
-#W3D article::after{ top: -5px; right: -5px; }
-#W3D article p::before{ bottom: -5px; left: -5px; }
-#W3D article p::after{ bottom: -5px; right: -5px; }
 /*Iluminacion*/
 #W3D #luz::after {
     content: "";
   position: absolute;
-  inset: 25px;
+  inset: 10px;
   background:
     radial-gradient(900px at left  0px top 0px,#ff53bb 100%,#0000),
-    radial-gradient(900px at right 0px bottom 0px,#00f8d3 100%,#0000);
+    radial-gradient(900px at right 900px top 900px,#00f8d3 100%,#0000);
   filter: blur(400px);
   opacity: .40;
     z-index: -1;

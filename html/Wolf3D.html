@@ -45,10 +45,9 @@
             <article id="a2">
                 <header>¿Que es el ray casting?</header>
                 <p>
-                    El ray casting es una técnica para crear proyecciones 3D basadas en un plano 2D, que es un array de unos y ceros, 
-                    donde los unos son paredes y los ceros son espacios vacíos.
-                    Se 'lanzan rayos' desde el campo de vision del jugador en su direccion,
-                    y se espera a que cada rayo colisione con una pared (cualquier 1 del array).
+                    El ray casting es una técnica para crear proyecciones 3D basadas en un plano 2D, (generalmente) un array de unos y ceros, 
+                    donde los unos representan las paredes y los ceros los espacios vacíos.
+                    Se 'lanzan rayos' desde el campo de vision del jugador, y se espera a que cada rayo colisione con una pared.
                     Se guarda la longitud de cada rayo y en base a eso, se renderizarán las paredes de una manera u otra
                     generando una impresión de profundidad.
                 </p>

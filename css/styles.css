@@ -325,7 +325,7 @@ h1, h2 {
 }
 
 .rune {
-    width: 40px; /* Ajusta según el tamaño de tus imágenes */
+    width: 80px; /* Ajusta según el tamaño de tus imágenes */
     opacity: 0.8;
     filter: drop-shadow(0 0 10px #ff0000);
     animation: float 10s infinite linear;

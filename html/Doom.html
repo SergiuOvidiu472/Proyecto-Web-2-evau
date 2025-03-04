@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doom - Videojuegos Favoritos</title>
+    <title>Doom</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="doom-page">
@@ -106,6 +106,25 @@
         <section class="play-area">
             <div class="neon-frame">
                 <iframe src="https://azazeln28.com/games/doom/" frameborder="0" allowfullscreen class="game-iframe"></iframe>
+            </div>
+        </section>
+        <section class="music-player">
+            <div class="player-background">
+                <div class="player-decor">
+                    <img src="../images/DoomGuy.png" alt="Doom Slayer Icon" class="slayer-icon">
+                </div>
+                <h3>Doom Slayer Soundtrack</h3>
+                <audio id="doom-audio" src="../sounds/RapDoom.MP3"></audio>
+                <div class="player-controls">
+                    <button id="rewind" class="control-button">◀ 10s</button>
+                    <button id="play-pause" class="control-button">▶</button>
+                    <button id="forward" class="control-button">10s ▶</button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" value="0" min="0" max="100">
+                    <span id="duration">0:00</span>
+                </div>
             </div>
         </section>
     </main>

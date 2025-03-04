@@ -1101,6 +1101,7 @@ h1, h2 {
 .reviews-section h2 {
     color: #ff0000;
     font-family: 'Cinzel', serif;
+    font-size: 40px;
     text-align: center;
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
     margin-bottom: 20px;

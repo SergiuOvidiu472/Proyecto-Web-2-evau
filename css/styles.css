@@ -594,6 +594,12 @@ h1, h2 {
     border-radius: 3px;
 
 }
+#indiceW3D a:hover {
+    padding: 10px;
+}
+#indiceW3D a:visited {
+color:gray;
+}
 /*Enlaces*/
 #WOLF3D a{
     text-decoration: none;

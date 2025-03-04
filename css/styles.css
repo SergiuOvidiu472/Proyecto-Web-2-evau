@@ -600,16 +600,16 @@ h1, h2 {
     border-radius: 3px;
 
 }
+/*Enlaces*/
+#indiceW3D a {
+    text-decoration: none;
+    color: WHITE;
+}
 #indiceW3D a:hover {
     padding: 10px;
 }
 #indiceW3D a:visited {
     color:gray;
-}
-/*Enlaces*/
-#WOLF3D a{
-    text-decoration: none;
-    color:#fff;
 }
 /*Cabecera de los articulos*/
 #W3D h2 {
@@ -967,4 +967,8 @@ h1, h2 {
 /*Separar las secciones del formulario*/
 .formularioMain section {
     margin: 2%;
+}
+
+.index-page nav a:visited {
+    color: palevioletred;
 }

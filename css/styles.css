@@ -595,7 +595,10 @@ h1, h2 {
 
 }
 #indiceW3D a:hover {
-
+    padding: 10px;
+}
+#indiceW3D a:visited {
+color:gray;
 }
 /*Enlaces*/
 #WOLF3D a{

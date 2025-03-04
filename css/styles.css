@@ -80,6 +80,11 @@ body {
     justify-content: center;
     margin-top: 10px;
 }
+
+.nav a:visited {
+    color: palevioletred;
+}
+
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -118,6 +123,7 @@ body {
         0 0 30px #ff0000;
     animation: pulseGlow 0.5s ease-in-out infinite alternate;
 }
+
 /* Secciones principales */
 .introduction, .game-info, .play-area {
     padding: 20px;
@@ -907,6 +913,25 @@ color:gray;
         text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000;
     }
 }
+
+/* Runas flotantes */
+
+.runes.left-1 {
+    left: 30px;
+}
+
+.runes.left-2 {
+    left: 100px;
+}
+
+.piezas-right-1 {
+    right: 30px;
+}
+
+.piezas-right-2 {
+    right: 50px;
+}
+
 
 /* Pie de página */
 .index-page .footer {

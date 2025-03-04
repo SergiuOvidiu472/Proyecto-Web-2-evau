@@ -4,59 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
+    <!--Header-->
+    <header class="header">
+        <!--El logo va aquí-->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Doom.html">Doom</a></li>
+                <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
+                <li><a href="Alice.html">Alice Madness</a></li>
+                <li><a href="formulario.html" class=".active">Formulario</a></li>
+              </ul>
+        </nav>
+    </header>
+
     <!--El formulario-->
-    <form action="algunapagina.html" method="POST">
+    <main>
+        <form action="algunapagina.html" method="POST">
         
-        <!--Desplegable-->
-        <section id="Desplegable">
-            <label>¿Cual es tu plataforma de videojuegos de preferencia?</label>
-            <select name="opciones">
-                <option>Steam</option>
-                <option>G2A</option>
-                <option>Epic Games</option>
-                <option>Social club</option>
-                <option>Prime gaming</option>
-            </select>
-        </section>
+            <!--Caja de texto-->
+            <section id="cajaDeTexto">
+                <label>¿Cuál es tu juego favorito?</label>
+                <input type="text" maxlength="50" size="50"/>
+            </section>
 
+            <!--Agrupacion de botones radio-->
+            <section id="radio">
+                <fieldset>
+                <legend>¿Con qué frecuencia juegas?</legend>
+                    <div>
+                        <input type="radio"/>
+                        <label>A diario</label>
+                    </div>
+                    <div>
+                        <input type="radio"/>
+                        <label for="dewey">Varias veces a la semana</label>
+                    </div>
+                    <div>
+                        <input type="radio"/>
+                        <label for="louie">Varias veces al mes</label>
+                    </div>
+                    <div>
+                        <input type="radio"/>
+                        <label for="louie">Varias veces al año</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                <legend>¿En qué prefieres jugar?</legend>
+                    <div>
+                        <input type="radio" id="huey" name="drone" value="huey"/>
+                        <label for="huey">Ordenador</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="dewey" name="drone" value="dewey" />
+                        <label for="dewey">Consola</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="louie" name="drone" value="louie" />
+                        <label for="louie">Ambos</label>
+                    </div>
+                </fieldset>
+            </section>
 
-        <!--Checkboxes-->
-        <section id="checkboxes">
-            <label>Cuales son tus estilos de videojuegos favoritos?</label></br>
-            <label>FPS</label>
-            <input type="checkbox" name="FPS"></br>
-            <label>Plataformas</label>
-            <input type="checkbox" name="Plataforma"></br>
-            <label>Aventuras de acción</label>
-            <input type="checkbox" name="Aventuras de accin"></br>
-            <label>Rol RPG</label>
-            <input type="checkbox" name="RPG"></br>
-            <label>Estrategias de tiempo (RTS)</label>
-            <input type="checkbox" name="RTS"></br>
-        </section>
+            <!--Selector de mes y años-->
+            <section id="meses">
+                <label>¿A partir de qué año empezaste a jugar? (mes aproximado)</label>
+                <input type="month" placeholder="YYYY/MM"/>
+            </section>
 
-        <!--Area de texto-->
-        <section id="areaDeTexto">
-            <label>Que es lo que mas aprecias de los videojuegos</label></br>
-            <textarea style="resize:none" id="areaTexto" name="areaTexto" rows="20" cols="80" resize:none ></textarea></br>
-        </section>
+            <!--Solo numeros-->
+            <section id="numeros">
+                <label>¿Cuánto te gastas al año en juegos?</label>
+                <input type="number" max="3000"/>
+            </section>
 
+            <!--Desplegable-->
+            <section id="Desplegable">
+                <label>¿Cual es tu plataforma de videojuegos de preferencia?</label>
+                <select name="opciones">
+                    <option>Steam</option>
+                    <option>G2A</option>
+                    <option>Epic Games</option>
+                    <option>Social club</option>
+                    <option>Prime gaming</option>
+                </select>
+            </section>
+    
+    
+            <!--Checkboxes-->
+            <section id="checkboxes">
+                <label>¿Cuáles son tus estilos de videojuegos favoritos?</label></br>
+                <label>FPS</label>
+                <input type="checkbox" name="FPS"></br>
+                <label>Plataformas</label>
+                <input type="checkbox" name="Plataforma"></br>
+                <label>Aventuras de acción</label>
+                <input type="checkbox" name="Aventuras de accin"></br>
+                <label>Rol RPG</label>
+                <input type="checkbox" name="RPG"></br>
+                <label>Estrategias de tiempo (RTS)</label>
+                <input type="checkbox" name="RTS"></br>
+            </section>
+    
+            <!--Area de texto-->
+            <section id="areaDeTexto">
+                <label>Que es lo que mas aprecias de los videojuegos</label></br>
+                <textarea style="resize:none" id="areaTexto" name="areaTexto" rows="20" cols="80" resize:none ></textarea></br>
+            </section>
+    
+    
+            <!--Un control para seleccionar un archivo.-->
+            <section id="archivos">
+                <label>Puedes subir capturas de pantallas de tus videojuegos aqui</label></br>
+                <input type="file" name="captura"/></br>
+            </section>
+            <!--Boton enviar-->
+            <!--Boton borrar-->
+            <section id="botones">
+                <input type="submit"/></br>
+                <input type="reset"/></br>
+            </section>
+        </form>
+    </main>
+    <footer>
 
-        <!--Un control para seleccionar un archivo.-->
-        <section id="archivos">
-            <label>Puedes subir capturas de pantallas de tus videojuegos favoritos aqui</label></br>
-            <input type="file" name="captura"/></br>
-        </section>
-        <!--Boton enviar-->
-        <!--Boton borrar-->
-        <section id="botones">
-            <input type="submit"/></br>
-            <input type="reset"/></br>
-        </section>
-    </form>
-
+    </footer>
 </body>
 </html>

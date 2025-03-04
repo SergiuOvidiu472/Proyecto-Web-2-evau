@@ -141,6 +141,9 @@ body {
             0 0 50px #ff0000;
     }
 }
+.game-links a:visited{
+    background-color: #333; /* Gris oscuro */
+}
 /* Títulos */
 h1, h2 {
     color: #ff0000; /* Rojo para destacar */
@@ -574,7 +577,7 @@ h1, h2 {
     src: url('../fonts/Jersey_20/Jersey20-Regular.ttf');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 /*Indice*/
 #indiceW3D {
@@ -590,16 +593,20 @@ h1, h2 {
     background: #1a1a1a;
     border-radius: 3px;
 
-
-    /*
-    border: 3px groove rgb(255, 255, 255);
-    box-shadow: -5px 8px 0px 0px #1a1a1a;*/
-
 }
 /*Enlaces*/
 #WOLF3D a{
     text-decoration: none;
     color:#fff;
+}
+/*Cabecera de los articulos*/
+#W3D h2 {
+    font-size: 20pt;
+    text-align: center;
+    color: white;
+    background: #1a1a1a;
+    border: 3px solid #1a1a1a;
+    border-radius: 10px;
 }
 /*Articulos*/
 #W3D article {
@@ -613,45 +620,47 @@ h1, h2 {
 
     border: 3px groove rgb(255, 255, 255);
     border-radius: 3px;
-    box-shadow: -5px 8px 0px 0px #1a1a1a;
+    box-shadow: -5px 8px #1a1a1a;
 }
-#W3D article header {
-    position: inherit;
-    font-family: "Jersey 20";
-    font-size: 20pt;
-    text-align: center;
-    
-    color: white;
-    background: #1a1a1a;
-    border: 3px solid #1a1a1a;
-    border-radius: 10px;
-}
-#W3D #a3 a {
+/*Enlace del articulo 3*/
+#a3 a {
     color: RED;
 }
-#W3D #a3 a:hover {
+#a3 a:hover {
     color: GREEN;
 }
-#W3D section img{
+/*El gif de la pagina*/
+#raycastingGif{
     padding: inherit;
     margin:auto;
     display: block;
 
     border: 5px groove #adadadbb;
     border-radius: 5px;
-    box-shadow: -5px 8px 0px 0px #1a1a1a;
+    box-shadow: -5px 8px #1a1a1a;
 }
 /*Iluminacion*/
-#W3D #luz::after {
+#luz::after {
     content: "";
-  position: absolute;
-  inset: 20px;
-  background:
-    radial-gradient(900px at left  0px top 0px,#ff53bb 100%,#0000),
-    radial-gradient(900px at right 900px top 900px,#00f8d3 100%,#0000);
-  filter: blur(300px);
-  opacity: .50;
+    position: absolute;
+    inset: 20px;
+    background:
+        radial-gradient(900px at left  0px top 0px,#ff53bb 100%,#0000),
+        radial-gradient(900px at right 900px top 900px,#00f8d3 100%,#0000);
+        filter: blur(300px);
+        opacity: .50;
     z-index: -1;
+}
+/*Mensaje*/
+#juega {
+    position: inherit;
+    margin: 25px;
+    padding: 25px;
+    font-family: "Jersey 20";
+    font-size: 26pt;
+    color: WHITE;
+    background: #1a1a1abb;
+    text-align: center;
 }
 /*iFrame juego*/
 #juegoW3D {

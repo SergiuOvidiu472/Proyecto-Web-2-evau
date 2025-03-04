@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body id="WOLF3D">
-    
+    <!--La cabecera de la pagina que contiene la lista-->
     <div class="header">
         <img src="../images/W_logo.png" alt="Doom Logo" class="logo">
         <nav class="nav">
@@ -25,14 +25,14 @@
             <li><a href="#a1">¿Qué es Wolfenstein?</a></li>
             <li><a href="#a2">¿Que es el ray casting?</a></li>
             <li><a href="#a3">CODE IT YOURSELF!</a></li>
-            <li><a href="#a4">Juega Wolfenstein</a></li>
+            <li><a href="#juegoW3D-container">Juega Wolfenstein</a></li>
         </ol>
     </div>
 
     <div id="W3D">
         <section>
             <article id="a1">
-                <header>Que es Wolfenstein3D</header>
+                <h2>¿Qué es Wolfenstein?</h2>
                 <p>
                 Wolfenstein es considerado uno de los pioneros de los videojuegos de disparos en primera persona (FPS).
                 Fue lanzado en mayo de 1992 por id Software que venía de trabajar en Hovertank 3D (1991) y Catacomb 3-D (1991), dos títulos que ya experimentaban con gráficos en 3D rudimentarios.
@@ -43,7 +43,7 @@
             </article>
             
             <article id="a2">
-                <header>¿Que es el ray casting?</header>
+                <h2>¿Que es el ray casting?</h2>
                 <p>
                     El ray casting es una técnica para crear proyecciones 3D basadas en un plano 2D, (generalmente) un array de unos y ceros, 
                     donde los unos representan las paredes y los ceros los espacios vacíos.
@@ -52,23 +52,20 @@
                     generando una impresión de profundidad.
                 </p>
             </article>
-            <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="uwu">
+            <img src="../images/Simple_raycasting_with_fisheye_correction.gif" id="raycastingGif" alt="raycastingGif">
             <article id="a3">
-                <header>CODE IT YOURSELF!</header>
+                <h2>CODE IT YOURSELF!</h2>
                 <p>Hay un tutorial en youtube del usuario "javidx9" que muestra en mayor detalle el funcionamiento 
                     del ray casting, desarrollando un juego ascii para terminal.
                 </p>
                 <p>Haz click <a href="https://www.youtube.com/watch?v=xW8skO7MFYw">aqui</a> para visitar su video.</p>
             </article>
             <div id="luz"></div>
-            <article id="a4">
-                <header>Juega a wolfenstein</header>
-                <p>Puedes jugar a wolfenstein aquí debajo.</p>
-            </article>
         </section>
-        <section class="juegoW3D-container">
-            <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
-        </section>
+        <div>
+            <h2 id="juega">Juega Wolfenstein</h2>
+        </div>
+        <iframe id="juegoW3D" src="../games/wolf3d-master/index.html"></iframe>
     </div>
 
 </body>

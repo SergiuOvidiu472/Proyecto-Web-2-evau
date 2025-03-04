@@ -721,6 +721,16 @@ h1, h2 {
     text-decoration: none;
     color: white;
 }
+
+.tabla-Alice a:visited{
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.tabla-Alice a:hover{
+    text-decoration: none;
+    color: red;
+}
 /*---------------------------------------------------------------------------------------------*/
 /*index*/
 /*---------------------------------------------------------------------------------------------*/

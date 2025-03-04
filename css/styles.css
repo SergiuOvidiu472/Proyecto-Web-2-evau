@@ -141,6 +141,9 @@ body {
             0 0 50px #ff0000;
     }
 }
+.game-links a:visited{
+    background-color: #333; /* Gris oscuro */
+}
 /* Títulos */
 h1, h2 {
     color: #ff0000; /* Rojo para destacar */

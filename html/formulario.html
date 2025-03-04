@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+
+    <!--Header-->
+    <header class="header">
+        <!--El logo va aquí-->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Doom.html">Doom</a></li>
+                <li><a href="Wolf3D.html">Wolfenstein3D</a></li>
+                <li><a href="Alice.html">Alice Madness</a></li>
+                <li><a href="formulario.html" class=".active">Formulario</a></li>
+              </ul>
+        </nav>
+    </header>
 
     <!--El formulario-->
     <form action="algunapagina.html" method="POST">
         
+        <!--Caja de texto-->
+        <section id="cajaDeTexto">
+            <label>¿Cómo te llamas?</label>
+            <input type="text" maxlength="50" size="50"/>
+        </section>
+
+        <!--Caja de texto que admita solo números y que se incremente de forma 
+        automática en una cantidad predeterminada.-->
+
+
         <!--Desplegable-->
         <section id="Desplegable">
             <label>¿Cual es tu plataforma de videojuegos de preferencia?</label>

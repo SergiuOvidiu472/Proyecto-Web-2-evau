@@ -594,6 +594,9 @@ h1, h2 {
     border-radius: 3px;
 
 }
+#indiceW3D a:hover {
+
+}
 /*Enlaces*/
 #WOLF3D a{
     text-decoration: none;

@@ -1352,7 +1352,9 @@ h1, h2 {
 }
 /*El formulario en si, definir estilos aqui*/
 .formularioMain form{
-    padding: 5%;
+    padding: 7% auto;
+    max-width: 900px;
+    padding: 20px;
     /*border: 2px solid WHITE;*/
     background-color: #8b3131;
     border-radius: 10px;
@@ -1363,7 +1365,215 @@ h1, h2 {
 .formularioMain section {
     margin: 2%;
 }
+/* Estilo del formulario */
+.formularioMain form {
+    padding: 5%;
+    background: linear-gradient(45deg, #222, #111); /* Fondo degradado oscuro */
+    border: 3px solid #ff0000; /* Borde neón rojo */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; /* Brillo neón */
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+    margin-bottom: 10%;
+    position: relative;
+    overflow: hidden;
+}
+/* Fondo de energía demoníaca detrás del formulario */
+.formularioMain form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    z-index: -1;
+    animation: firePulse 3s infinite;
+}
+/* Separar las secciones del formulario */
+.formularioMain section {
+    margin: 2% 0;
+    padding: 10px;
+    border-bottom: 1px solid #ff0000; /* Línea divisoria roja */
+}
+
+/* Estilo de las etiquetas */
+.formularioMain label {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 5px #ff0000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los campos de entrada */
+.formularioMain input[type="text"],
+.formularioMain input[type="number"],
+.formularioMain input[type="month"],
+.formularioMain select,
+.formularioMain textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.formularioMain input[type="text"]:focus,
+.formularioMain input[type="number"]:focus,
+.formularioMain input[type="month"]:focus,
+.formularioMain select:focus,
+.formularioMain textarea:focus {
+    box-shadow: 0 0 15px #ff0000;
+    outline: none;
+}
+
+/* Estilo de los radio buttons y checkboxes */
+.formularioMain input[type="radio"],
+.formularioMain input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #ff0000; /* Color rojo para los radio buttons y checkboxes */
+}
+
+/* Estilo del fieldset */
+.formularioMain fieldset {
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.formularioMain fieldset legend {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 22px;
+    text-shadow: 0 0 5px #ff0000;
+    padding: 0 10px;
+}
+
+.formularioMain fieldset div {
+    margin: 10px 0;
+}
+
+/* Estilo del textarea */
+.formularioMain textarea {
+    resize: none; /* Ya lo tienes */
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+}
+
+/* Estilo del input file */
+.formularioMain input[type="file"] {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+}
+
+.formularioMain input[type="file"]::-webkit-file-upload-button {
+    background: #111;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px #ff0000;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.formularioMain input[type="file"]::-webkit-file-upload-button:hover {
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* Estilo de los botones de enviar y borrar */
+.formularioMain #botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formularioMain input[type="submit"],
+.formularioMain input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Metal Mania', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px #ff0000;
+    margin: 10px;
+}
+
+.formularioMain input[type="submit"]:hover,
+.formularioMain input[type="reset"]:hover {
+    background-color: #ff0000;
+    color: #000;
+    box-shadow: 0 0 15px #ff0000;
+    text-shadow: 0 0 5px #000;
+}
+
+.formularioMain input[type="submit"]:active,
+.formularioMain input[type="reset"]:active {
+    transform: scale(0.95);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .formularioMain {
+        margin: 10% 5%;
+        padding: 10px;
+    }
+
+    .formularioMain form {
+        padding: 20px;
+    }
+
+    .formularioMain input[type="text"],
+    .formularioMain input[type="number"],
+    .formularioMain input[type="month"],
+    .formularioMain select,
+    .formularioMain textarea {
+        max-width: 100%;
+    }
+}
 
 .index-page nav a:visited {
     color: palevioletred;
+}
+.formulario-page {
+    background: linear-gradient(45deg, #1a1a1a, #2a0000); /* Fondo degradado para la página */
+    background-size: 400% 400%;
+    animation: infernalSky 30s infinite; /* Animación del cielo infernal */
+}
+@keyframes infernalSky {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+.formulario-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent),
+                radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    z-index: -1;
+    animation: cloudMove 60s infinite linear;
+}
+
+@keyframes cloudMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

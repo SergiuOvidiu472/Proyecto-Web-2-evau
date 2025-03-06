@@ -63,6 +63,26 @@ body {
     opacity: 0.7;
     animation: firePulse 1.5s infinite;
 }
+/*Tipos de letra*/
+@font-face {
+    font-family: 'MetalMania';
+    src: url('../fonts/Metal_Mania/MetalMania-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../fonts/Cinzel/Cinzel-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant';
+    src: url(../fonts/Cormorant_Unicase/CormorantUnicase-Bold.ttf);
+    font-weight: normal;
+    font-size: normal;
+}
 /*Animación encabezado*/
 @keyframes fireGlow {
     0% { filter: drop-shadow(0 0 10px #ff4500); }
@@ -166,19 +186,7 @@ h1, h2 {
 /*---------------------------------------------------------------------------------------------*/
 /*DOOM*/
 /*---------------------------------------------------------------------------------------------*/
-@font-face {
-    font-family: 'MetalMania';
-    src: url('../fonts/Metal_Mania/MetalMania-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Cinzel';
-    src: url('../fonts/Cinzel/Cinzel-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 /* Marco con efecto neón */
 .neon-frame {
     position: relative;
@@ -300,7 +308,7 @@ h1, h2 {
 .runes {
     position: fixed;
     top: 0;
-    width: 50px;
+    width: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -317,16 +325,22 @@ h1, h2 {
 }
 
 .rune {
-    width: 40px; /* Ajusta según el tamaño de tus imágenes */
+    width: 80px; /* Ajusta según el tamaño de tus imágenes */
     opacity: 0.8;
     filter: drop-shadow(0 0 10px #ff0000);
     animation: float 10s infinite linear;
+}
+/* Brillo pulsante en las runas */
+@keyframes runeGlow {
+    0% { filter: drop-shadow(0 0 15px #ff0000); }
+    100% { filter: drop-shadow(0 0 30px #ff4500); }
 }
 
 @keyframes float {
     0% { transform: translateY(100vh); }
     100% { transform: translateY(-100vh); }
 }
+
 
 .runes .rune:nth-child(2) { animation-delay: 1s; }
 .runes .rune:nth-child(3) { animation-delay: 2s; }
@@ -376,6 +390,12 @@ h1, h2 {
     width: auto;
     opacity: 0.8; /* Sutil transparencia */
     filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */
+}
+
+/* Efecto al pasar el ratón */
+.doom-slayer:hover, .cyber-demon:hover {
+    animation: pulseGlow 0.5s infinite alternate;
+    filter: drop-shadow(0 0 20px #ff0000);
 }
 /*Reproductor Doom*/
 .music-player {
@@ -574,6 +594,160 @@ h1, h2 {
     50% { transform: scale(1.05); opacity: 0.7; }
     100% { transform: scale(1); opacity: 0.5; }
 }
+/* Galería de enemigos */
+.enemy-gallery {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: linear-gradient(45deg, #222, #111);
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título de la galería */
+.enemy-gallery h2 {
+    color: #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin-bottom: 30px;
+}
+
+/* Cuadrícula de enemigos */
+.enemy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Más espacio para cada enemigo */
+    gap: 30px; /* Más separación entre los elementos */
+    width: 100%;
+}
+
+/* Cada enemigo */
+.enemy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Efecto al pasar el ratón */
+.enemy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+
+/* Imagen del enemigo */
+.enemy-image img {
+    width: 100%;
+    height: auto; /* Permite que la imagen mantenga su proporción */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    filter: grayscale(80%) brightness(50%); /* Inicialmente apagada */
+    transition: filter 0.5s ease;
+}
+
+/* Contenedor de la imagen */
+.enemy-image {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Tamaño adecuado para las imágenes */
+    margin-bottom: 15px;
+}
+
+/* Fondo de energía demoníaca */
+.enemy-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+/* Overlay con descripción */
+.enemy-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 10px;
+    text-align: center;
+}
+
+.enemy-overlay h3 {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 5px;
+}
+
+.enemy-overlay p {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+}
+/* Efecto al pasar el ratón */
+.enemy-item:hover .enemy-image img {
+    filter: grayscale(0%) brightness(100%); /* Se ilumina */
+}
+
+.enemy-item:hover .enemy-bg {
+    opacity: 1; /* Revela el fondo de energía */
+    animation: pulseGlow 1s infinite alternate;
+}
+
+/* Efecto al pasar el ratón */
+.enemy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+.enemy-item:hover img {
+    filter: grayscale(0%) brightness(100%); /* Se ilumina */
+}
+
+.enemy-item:hover .enemy-overlay {
+    opacity: 1; /* Revela la descripción */
+}
+/* Información del enemigo */
+.enemy-info {
+    text-align: center;
+    color: #fff;
+}
+
+.enemy-info h3 {
+    color: #ff6200;
+    font-family: 'MetalMania', sans-serif;
+    font-size: 30px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 10px;
+}
+
+.enemy-info p {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/
@@ -748,9 +922,39 @@ h1, h2 {
 /*---------------------------------------------------------------------------------------------*/
 .index-page {
     font-family: 'Metal Mania', sans-serif;
-    background-color: #1a1a1a;
+    background: linear-gradient(45deg, #1a1a1a, #2a0000);
+    background-size: 400% 400%;
     color: #fff;
     line-height: 1.6;
+    position: relative;
+    animation: infernalSky 30s infinite;
+}
+
+/* Animación del cielo infernal */
+@keyframes infernalSky {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Nubes negras en movimiento */
+.index-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent),
+                radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    z-index: -1;
+    animation: cloudMove 60s infinite linear;
+}
+
+@keyframes cloudMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Encabezado similar a las otras páginas */
@@ -806,12 +1010,23 @@ h1, h2 {
 }
 
 /* Secciones principales */
-.index-page .introduction, .index-page .game-categories, .index-page .featured-games {
+.index-page .introduction, .index-page .game-categories, .index-page .featured-games, .index-page .classic-games {
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px;
-    background-color: #333;
+    max-width: 1200px;
+    background: linear-gradient(45deg, #222, #111); /* Fondo degradado oscuro */
+    border: 3px solid #ff0000; /* Borde neón rojo */
     border-radius: 5px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; /* Brillo neón */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.introduction p {
+    font-family: 'Cormorant', 'arial';
+    font-size: larger;
 }
 
 .index-page h1, .index-page h2 {
@@ -822,34 +1037,49 @@ h1, h2 {
 /* Tabla de categorías con animación */
 .category-table {
     width: 100%;
+    max-width: 100%; /* Asegura que la tabla no exceda el contenedor */
     border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #222;
+    margin: 20px 0; /* Centra verticalmente, elimina márgenes laterales */
+    background: linear-gradient(45deg, #222, #111);
     color: #fff;
     animation: tableFadeIn 1s ease-in-out;
+    box-shadow: 0 0 15px #ff0000;
 }
 
 .category-table th, .category-table td {
-    padding: 12px;
+    padding: 15px; /* Más espaciado para que sea más legible */
     text-align: left;
     border: 2px solid #ff0000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-table th {
-    background-color: #000;
-    font-family: 'Cinzel', serif;
-    text-shadow: 0 0 5px #ff0000;
+    background: linear-gradient(45deg, #000, #333); /* Fondo degradado para los encabezados */
+    font-family: 'Cormorant', sans-serif; /* Fuente temática */
+    font-size: 25px;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+    color: #ff0000; /* Texto rojo */
 }
 
+.category-table td {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Efecto al pasar el ratón */
 .category-table tr {
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .category-table tr:hover {
-    background-color: #444;
-    animation: tableGlow 0.5s infinite alternate;
+    background: linear-gradient(45deg, #333, #444); /* Fondo más claro al pasar el ratón */
+    transform: scale(1.02); /* Ligeramente más grande */
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; /* Brillo neón más intenso */
 }
 
+/* Animaciones */
 @keyframes tableFadeIn {
     from {
         opacity: 0;
@@ -942,6 +1172,171 @@ h1, h2 {
     bottom: 0;
     width: 100%;
 }
+
+.index-page .featured-games h2 {
+    color: #ff0000;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: fireTitle 2s infinite alternate;
+}
+
+@keyframes fireTitle {
+    0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff4500;
+        color: #ff0000;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff4500;
+        color: #ff4500;
+    }
+}
+
+/* Contenedor de paneles horizontales */
+.game-panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho total */
+    margin: 30px auto;
+    overflow: hidden; /* Evita que las imágenes desborden */
+}
+
+/* Estilo de cada panel */
+.panel {
+    flex: 1;
+    height: 400px;
+    transition: flex 0.5s ease, opacity 0.5s ease, filter 0.5s ease; /* Añadimos transiciones para opacidad y filtro */
+}
+
+/* Enlace del panel */
+.panel a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagen dentro del panel */
+.panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+}
+
+/* Efecto al pasar el ratón */
+.panel:hover {
+    flex: 2; /* El panel se expande al pasar el ratón */
+}
+.panel:hover img {
+    transform: scale(1.1); /* La imagen se agranda ligeramente para un efecto adicional */
+}
+
+/* Las imágenes no seleccionadas se comprimen */
+.game-panels:hover .panel {
+    flex: 0.5;
+    opacity: 0.7;
+    filter: blur(3px) grayscale(80%) sepia(50%) brightness(50%); /* Añade un efecto monocromático */
+}
+
+.game-panels:hover .panel:hover {
+    flex: 2;
+    opacity: 1; /* Mantiene la opacidad completa */
+    filter: none; /* Sin desenfoque */
+}
+
+.index-page .header .logo:active {
+    transform: scale(0.95); /* Se "hunde" ligeramente al hacer clic */
+}
+/* Sección de reseñas */
+.reviews-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: linear-gradient(45deg, #222, #111);
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título de la sección */
+.reviews-section h2 {
+    color: #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin-bottom: 20px;
+}
+
+/* Cada reseña */
+.review-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.review-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+
+/* Invierte la disposición (imagen a la derecha, texto a la izquierda) */
+.review-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Contenedor de la imagen */
+.review-image {
+    flex: 1;
+    margin: 0 20px;
+}
+
+/* Imagen de la portada */
+.review-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Contenedor del texto */
+.review-text {
+    flex: 2;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+}
+
+/* Título de la reseña */
+.review-text h3 {
+    color: #ff6a00;
+    font-family: 'Cormorant', sans-serif;
+    font-size: 45px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 10px;
+}
+
+/* Texto de la reseña */
+.review-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 /*-------------------------------------------------------------------------------------------------------*/
 /*Formulario*/
 /*-------------------------------------------------------------------------------------------------------*/
@@ -957,7 +1352,9 @@ h1, h2 {
 }
 /*El formulario en si, definir estilos aqui*/
 .formularioMain form{
-    padding: 5%;
+    padding: 7% auto;
+    max-width: 900px;
+    padding: 20px;
     /*border: 2px solid WHITE;*/
     background-color: #8b3131;
     border-radius: 10px;
@@ -968,7 +1365,215 @@ h1, h2 {
 .formularioMain section {
     margin: 2%;
 }
+/* Estilo del formulario */
+.formularioMain form {
+    padding: 5%;
+    background: linear-gradient(45deg, #222, #111); /* Fondo degradado oscuro */
+    border: 3px solid #ff0000; /* Borde neón rojo */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; /* Brillo neón */
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+    margin-bottom: 10%;
+    position: relative;
+    overflow: hidden;
+}
+/* Fondo de energía demoníaca detrás del formulario */
+.formularioMain form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    z-index: -1;
+    animation: firePulse 3s infinite;
+}
+/* Separar las secciones del formulario */
+.formularioMain section {
+    margin: 2% 0;
+    padding: 10px;
+    border-bottom: 1px solid #ff0000; /* Línea divisoria roja */
+}
+
+/* Estilo de las etiquetas */
+.formularioMain label {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 5px #ff0000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los campos de entrada */
+.formularioMain input[type="text"],
+.formularioMain input[type="number"],
+.formularioMain input[type="month"],
+.formularioMain select,
+.formularioMain textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.formularioMain input[type="text"]:focus,
+.formularioMain input[type="number"]:focus,
+.formularioMain input[type="month"]:focus,
+.formularioMain select:focus,
+.formularioMain textarea:focus {
+    box-shadow: 0 0 15px #ff0000;
+    outline: none;
+}
+
+/* Estilo de los radio buttons y checkboxes */
+.formularioMain input[type="radio"],
+.formularioMain input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #ff0000; /* Color rojo para los radio buttons y checkboxes */
+}
+
+/* Estilo del fieldset */
+.formularioMain fieldset {
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.formularioMain fieldset legend {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 22px;
+    text-shadow: 0 0 5px #ff0000;
+    padding: 0 10px;
+}
+
+.formularioMain fieldset div {
+    margin: 10px 0;
+}
+
+/* Estilo del textarea */
+.formularioMain textarea {
+    resize: none; /* Ya lo tienes */
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+}
+
+/* Estilo del input file */
+.formularioMain input[type="file"] {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+}
+
+.formularioMain input[type="file"]::-webkit-file-upload-button {
+    background: #111;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px #ff0000;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.formularioMain input[type="file"]::-webkit-file-upload-button:hover {
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* Estilo de los botones de enviar y borrar */
+.formularioMain #botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formularioMain input[type="submit"],
+.formularioMain input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Metal Mania', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px #ff0000;
+    margin: 10px;
+}
+
+.formularioMain input[type="submit"]:hover,
+.formularioMain input[type="reset"]:hover {
+    background-color: #ff0000;
+    color: #000;
+    box-shadow: 0 0 15px #ff0000;
+    text-shadow: 0 0 5px #000;
+}
+
+.formularioMain input[type="submit"]:active,
+.formularioMain input[type="reset"]:active {
+    transform: scale(0.95);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .formularioMain {
+        margin: 10% 5%;
+        padding: 10px;
+    }
+
+    .formularioMain form {
+        padding: 20px;
+    }
+
+    .formularioMain input[type="text"],
+    .formularioMain input[type="number"],
+    .formularioMain input[type="month"],
+    .formularioMain select,
+    .formularioMain textarea {
+        max-width: 100%;
+    }
+}
 
 .index-page nav a:visited {
     color: palevioletred;
+}
+.formulario-page {
+    background: linear-gradient(45deg, #1a1a1a, #2a0000); /* Fondo degradado para la página */
+    background-size: 400% 400%;
+    animation: infernalSky 30s infinite; /* Animación del cielo infernal */
+}
+@keyframes infernalSky {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+.formulario-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent),
+                radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    z-index: -1;
+    animation: cloudMove 60s infinite linear;
+}
+
+@keyframes cloudMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

@@ -923,6 +923,29 @@ h1, h2 {
     font-size: 30px;
     color: burlywood;
 }
+
+/* Información del enemigo */
+.alice-enemy-info {
+    font-family: 'fuente-alice';
+    text-align: center;
+    color: #fff;
+}
+
+.alice-enemy-info h3 {
+    font-family: 'fuente-alice';
+    color: #ff6200;
+    font-size: 30px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 10px;
+}
+
+.alice-enemy-info p {
+    font-family: 'fuente-alice';
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
 /*---------------------------------------------------------------------------------------------*/
 /*index*/
 /*---------------------------------------------------------------------------------------------*/

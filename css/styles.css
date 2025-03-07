@@ -778,6 +778,257 @@ h1, h2 {
     100% { transform: scale(1); opacity: 0.5; }
 }
 
+<<<<<<< HEAD
+=======
+/* Título de la galería */
+.enemy-gallery h2 {
+    color: #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin-bottom: 30px;
+}
+
+/* Cuadrícula de enemigos */
+.enemy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Más espacio para cada enemigo */
+    gap: 30px; /* Más separación entre los elementos */
+    width: 100%;
+}
+
+/* Cada enemigo */
+.enemy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Efecto al pasar el ratón */
+.enemy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+
+/* Imagen del enemigo */
+.enemy-image img {
+    width: 100%;
+    height: auto; /* Permite que la imagen mantenga su proporción */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    filter: grayscale(80%) brightness(50%); /* Inicialmente apagada */
+    transition: filter 0.5s ease;
+}
+
+/* Contenedor de la imagen */
+.enemy-image {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Tamaño adecuado para las imágenes */
+    margin-bottom: 15px;
+}
+
+/* Fondo de energía demoníaca */
+.enemy-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+/* Overlay con descripción */
+.enemy-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 10px;
+    text-align: center;
+}
+
+.enemy-overlay h3 {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 5px;
+}
+
+.enemy-overlay p {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+}
+/* Efecto al pasar el ratón */
+.enemy-item:hover .enemy-image img {
+    filter: grayscale(0%) brightness(100%); /* Se ilumina */
+}
+
+.enemy-item:hover .enemy-bg {
+    opacity: 1; /* Revela el fondo de energía */
+    animation: pulseGlow 1s infinite alternate;
+}
+
+/* Efecto al pasar el ratón */
+.enemy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+.enemy-item:hover img {
+    filter: grayscale(0%) brightness(100%); /* Se ilumina */
+}
+
+.enemy-item:hover .enemy-overlay {
+    opacity: 1; /* Revela la descripción */
+}
+/* Información del enemigo */
+.enemy-info {
+    text-align: center;
+    color: #fff;
+}
+
+.enemy-info h3 {
+    color: #ff6200;
+    font-family: 'MetalMania', sans-serif;
+    font-size: 30px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 10px;
+}
+
+.enemy-info p {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Galería de armas en Doom */
+.weapon-gallery {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: linear-gradient(45deg, #222, #111);
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Título de la galería */
+.weapon-gallery h2 {
+    color: #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin-bottom: 30px;
+}
+
+/* Estilo de la lista de definición */
+.weapon-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Cuadrícula similar a la galería de enemigos */
+    gap: 30px;
+}
+
+/* Contenedor de cada arma (dt y dd juntos) */
+.weapon-list dt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre el dt */
+.weapon-list dt:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+
+/* Imagen del arma */
+.weapon-list dt img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    filter: grayscale(80%) brightness(50%);
+    transition: filter 0.5s ease;
+}
+
+/* Efecto al pasar el ratón sobre la imagen */
+.weapon-list dt:hover img {
+    filter: grayscale(0%) brightness(100%);
+}
+
+/* Nombre del arma */
+.weapon-list dt span {
+    color: #ff6200;
+    font-family: 'MetalMania', sans-serif;
+    font-size: 24px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Descripción del arma */
+.weapon-list dd {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 15px;
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 4px solid #ff0000;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre la descripción */
+.weapon-list dd:hover {
+    box-shadow: 0 0 20px #ff0000;
+    transform: translateX(10px);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .weapon-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 1 columna en pantallas pequeñas */
+    }
+
+    .weapon-list dt img {
+        max-width: 250px;
+    }
+}
+>>>>>>> main
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/

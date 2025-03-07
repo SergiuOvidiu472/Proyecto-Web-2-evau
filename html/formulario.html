@@ -32,18 +32,15 @@
         </nav>
     </header>
 
-    <!--El formulario-->
     <main class="formularioMain">
         <form action="index.html" method="POST">
         
-            <!--Caja de texto-->
             <section id="cajaDeTexto">
                 <label>¿Cuál es tu juego favorito?</label>
                 <input type="text" maxlength="50" size="50"/>
             </section>
 
 
-            <!--Agrupacion de botones radio-->
             <section id="radio">
                 <fieldset>
                 <legend>¿Con qué frecuencia juegas?</legend>
@@ -85,19 +82,16 @@
                 </fieldset>
             </section>
 
-            <!--Selector de mes y años-->
             <section id="meses">
                 <label>¿A partir de qué año empezaste a jugar? (mes aproximado)</label>
                 <input type="month" placeholder="YYYY/MM"/>
             </section>
 
-            <!--Solo numeros-->
             <section id="numeros">
                 <label>¿Cuánto te gastas al año en juegos?</label>
                 <input type="number" max="3000"/>
             </section>
 
-            <!--Desplegable-->
             <section id="Desplegable">
                 <label>¿Cual es tu plataforma de videojuegos de preferencia?</label>
                 <select name="opciones">
@@ -109,8 +103,6 @@
                 </select>
             </section>
     
-    
-            <!--Checkboxes-->
             <section id="checkboxes">
                 <label>¿Cuáles son tus estilos de videojuegos favoritos?</label></br>
                 <label>FPS</label>
@@ -125,20 +117,17 @@
                 <input type="checkbox" name="RTS"></br>
             </section>
     
-            <!--Area de texto-->
             <section id="areaDeTexto">
                 <label>Que es lo que mas aprecias de los videojuegos</label></br>
                 <textarea style="resize:none" id="areaTexto" name="areaTexto" rows="20" cols="80" resize:none ></textarea></br>
             </section>
     
     
-            <!--Un control para seleccionar un archivo.-->
             <section id="archivos">
                 <label>Puedes subir capturas de pantallas de tus videojuegos aqui</label></br>
                 <input type="file" name="captura"/></br>
             </section>
-            <!--Boton enviar-->
-            <!--Boton borrar-->
+            
             <section id="botones">
                 <input type="submit"/></br>
                 <input type="reset"/></br>

@@ -1623,7 +1623,7 @@ h1, h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto al pasar el ratón */
+/* Efecto al pasar el ratón  */
 .review-item:hover {
     transform: scale(1.02);
     box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;

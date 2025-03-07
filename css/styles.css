@@ -1406,7 +1406,7 @@ h1, h2 {
 /*-------------------------------------------------------------------------------------------------------*/
 /*Formulario*/
 /*-------------------------------------------------------------------------------------------------------*/
-/*El body del formulario*/
+
 .formularioMain{
     margin-top: 7%;
     margin-left: 7%;
@@ -1416,34 +1416,23 @@ h1, h2 {
     font-weight: 400;
     font-size: 18px;
 }
-/*El formulario en si, definir estilos aqui*/
-.formularioMain form{
-    padding: 7% auto;
-    max-width: 900px;
-    padding: 20px;
-    /*border: 2px solid WHITE;*/
-    background-color: #8b3131;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10%;
-}
-/*Separar las secciones del formulario*/
-.formularioMain section {
-    margin: 2%;
-}
-/* Estilo del formulario */
+
 .formularioMain form {
     padding: 5%;
-    background: linear-gradient(45deg, #222, #111); /* Fondo degradado oscuro */
-    border: 3px solid #ff0000; /* Borde neón rojo */
+    max-width: 900px;
+    background: linear-gradient(45deg, #222, #111); 
+    background-color: #8b3131;
+    border: 3px solid #ff0000;
     border-radius: 10px;
-    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; /* Brillo neón */
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; 
+    box-sizing: border-box;
     animation: neon-glow 1.5s ease-in-out infinite alternate;
     margin-bottom: 10%;
     position: relative;
     overflow: hidden;
-}
-/* Fondo de energía demoníaca detrás del formulario */
+} 
+
+/* Fondo */
 .formularioMain form::before {
     content: '';
     position: absolute;
@@ -1456,14 +1445,15 @@ h1, h2 {
     z-index: -1;
     animation: firePulse 3s infinite;
 }
+
 /* Separar las secciones del formulario */
 .formularioMain section {
     margin: 2% 0;
     padding: 10px;
-    border-bottom: 1px solid #ff0000; /* Línea divisoria roja */
+    border-bottom: 1px solid #ff0000; 
 }
 
-/* Estilo de las etiquetas */
+/* etiquetas */
 .formularioMain label {
     color: #ff0000;
     font-family: 'Metal Mania', sans-serif;
@@ -1473,7 +1463,7 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
-/* Estilo de los campos de entrada */
+/* campos de entrada */
 .formularioMain input[type="text"],
 .formularioMain input[type="number"],
 .formularioMain input[type="month"],
@@ -1501,14 +1491,14 @@ h1, h2 {
     outline: none;
 }
 
-/* Estilo de los radio buttons y checkboxes */
+/* radio buttons y checkboxes */
 .formularioMain input[type="radio"],
 .formularioMain input[type="checkbox"] {
     margin-right: 10px;
-    accent-color: #ff0000; /* Color rojo para los radio buttons y checkboxes */
+    accent-color: #ff0000; 
 }
 
-/* Estilo del fieldset */
+/* fieldset */
 .formularioMain fieldset {
     border: 2px solid #ff0000;
     border-radius: 5px;
@@ -1529,15 +1519,15 @@ h1, h2 {
     margin: 10px 0;
 }
 
-/* Estilo del textarea */
+/* textarea */
 .formularioMain textarea {
-    resize: none; /* Ya lo tienes */
+    resize: none; 
     width: 100%;
     max-width: 600px;
     height: 150px;
 }
 
-/* Estilo del input file */
+/* input file */
 .formularioMain input[type="file"] {
     color: #fff;
     font-family: 'Cinzel', serif;
@@ -1558,7 +1548,7 @@ h1, h2 {
     box-shadow: 0 0 15px #ff0000;
 }
 
-/* Estilo de los botones de enviar y borrar */
+/* botones de enviar y borrar */
 .formularioMain #botones {
     text-align: center;
     margin-top: 20px;
@@ -1592,7 +1582,6 @@ h1, h2 {
     transform: scale(0.95);
 }
 
-/* Ajustes responsivos */
 @media (max-width: 768px) {
     .formularioMain {
         margin: 10% 5%;
@@ -1616,9 +1605,9 @@ h1, h2 {
     color: palevioletred;
 }
 .formulario-page {
-    background: linear-gradient(45deg, #1a1a1a, #2a0000); /* Fondo degradado para la página */
+    background: linear-gradient(45deg, #1a1a1a, #2a0000); 
     background-size: 400% 400%;
-    animation: infernalSky 30s infinite; /* Animación del cielo infernal */
+    animation: infernalSky 30s infinite; 
 }
 @keyframes infernalSky {
     0% { background-position: 0% 0%; }

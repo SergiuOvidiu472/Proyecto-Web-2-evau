@@ -366,9 +366,6 @@ h1, h2 {
     transform: scale(1.05);
     box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
 }
-.enemy-item:hover img {
-    filter: grayscale(0%) brightness(100%); 
-}
 
 .enemy-item:hover .enemy-overlay {
     opacity: 1; 

@@ -7,11 +7,12 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Anton', sans-serif; /* Cambia por tu fuente local si la tienes */
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
+    font-family: 'Anton', sans-serif; 
+    background-color: #1a1a1a; 
+    color: #fff; 
     line-height: 1.6;
 }
+
 /* Encabezado */
 .header {
     background: radial-gradient(circle, #111, #000);
@@ -41,7 +42,8 @@ body {
     0% { opacity: 0.5; }
     100% { opacity: 0.8; }
 }
-/* Cursor predeterminado en el encabezado */
+
+/* Cursor encabezado */
 .header, .header * {
     cursor: default !important;
 }
@@ -63,6 +65,7 @@ body {
     opacity: 0.7;
     animation: firePulse 1.5s infinite;
 }
+
 /*Tipos de letra*/
 @font-face {
     font-family: 'MetalMania';
@@ -83,6 +86,7 @@ body {
     font-weight: normal;
     font-size: normal;
 }
+
 /*Animación encabezado*/
 @keyframes fireGlow {
     0% { filter: drop-shadow(0 0 10px #ff4500); }
@@ -110,33 +114,36 @@ body {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
-    position: relative; /* Para el subrayado */
-    transition: color 0.3s ease; /* Suavizar el cambio de color */
+    position: relative; 
+    transition: color 0.3s ease; 
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 .nav a span {
     position: relative;
-    z-index: 1; /* Mantener el texto sobre el subrayado */
+    z-index: 1; 
 }
+
 /* Efecto de subrayado animado */
 .nav a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Espacio bajo el texto */
+    bottom: -5px; 
     width: 0;
     height: 3px;
-    background: linear-gradient(to right, #ff0000, #ff4500); /* Gradiente rojo-naranja */
+    background: linear-gradient(to right, #ff0000, #ff4500); 
     transition: width 0.4s ease;
     box-shadow: 0 0 10px #ff0000;
 }
+
 /* Efecto hover */
 .nav a:hover::after, .nav a.active::after {
     width: 100%;
 }
+
 /* Efecto de brillo y pulso */
 .nav a:hover, .nav a.active {
-    color: #ff0000; /* Color rojo brillante */
+    color: #ff0000; 
     text-shadow: 
         0 0 10px #ff0000,
         0 0 20px #ff0000,
@@ -148,10 +155,11 @@ body {
 .introduction, .game-info, .play-area {
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px; /* Ancho máximo para legibilidad */
-    background-color: #333; /* Gris oscuro */
+    max-width: 800px; 
+    background-color: #333; 
     border-radius: 5px;
 }
+
 /* Animación de pulso */
 @keyframes pulseGlow {
     from {
@@ -168,12 +176,14 @@ body {
     }
 }
 .game-links a:visited{
-    background-color: #333; /* Gris oscuro */
+    background-color: #333; 
 }
+
 /* Títulos */
 h1, h2 {
-    color: #ff0000; /* Rojo para destacar */
+    color: #ff0000; 
 }
+
 /* Pie de página */
 .footer {
     text-align: center;
@@ -183,6 +193,207 @@ h1, h2 {
     bottom: 0;
     width: 100%;
 }
+
+/* Elementos flotantes */
+.runes {
+    position: fixed;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.runes.left {
+    left: 30px;
+}
+
+.runes.right {
+    right: 30px;
+}
+
+.rune {
+    width: 80px; 
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #ff0000);
+    animation: float 10s infinite linear;
+}
+
+/* Brillo pulsante */
+@keyframes runeGlow {
+    0% { filter: drop-shadow(0 0 15px #ff0000); }
+    100% { filter: drop-shadow(0 0 30px #ff4500); }
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+
+.runes .rune:nth-child(2) { animation-delay: 1s; }
+.runes .rune:nth-child(3) { animation-delay: 2s; }
+
+/* Galería de elentos */
+.enemy-gallery {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: linear-gradient(45deg, #222, #111);
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título de la galería */
+.enemy-gallery h2 {
+    color: #ff0000;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin-bottom: 30px;
+}
+
+/* Cuadrícula */
+.enemy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px; 
+    width: 100%;
+}
+
+/* Cada elemento */
+.enemy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.enemy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+
+/* Imagen del elemento */
+.enemy-image img {
+    width: 100%;
+    height: auto; 
+    max-height: 300px; 
+    object-fit: contain; 
+    filter: grayscale(80%) brightness(50%); 
+    transition: filter 0.5s ease;
+}
+
+/* Contenedor de la imagen */
+.enemy-image {
+    position: relative;
+    width: 100%;
+    max-width: 300px; 
+    margin-bottom: 15px;
+}
+
+/* Fondo */
+.enemy-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+/* Overlay con descripción */
+.enemy-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 10px;
+    text-align: center;
+}
+
+.enemy-overlay h3 {
+    color: #ff0000;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 5px;
+}
+
+.enemy-overlay p {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+}
+
+/* Efecto al pasar el ratón */
+.enemy-item:hover .enemy-image img {
+    filter: grayscale(0%) brightness(100%); 
+}
+
+.enemy-item:hover .enemy-bg {
+    opacity: 1; 
+    animation: pulseGlow 1s infinite alternate;
+}
+
+/* Efecto al pasar el ratón */
+.enemy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
+}
+.enemy-item:hover img {
+    filter: grayscale(0%) brightness(100%); 
+}
+
+.enemy-item:hover .enemy-overlay {
+    opacity: 1; 
+}
+
+/* Información del enemigo */
+.enemy-info {
+    text-align: center;
+    color: #fff;
+}
+
+.enemy-info h3 {
+    color: #ff6200;
+    font-family: 'MetalMania', sans-serif;
+    font-size: 30px;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 10px;
+}
+
+.enemy-info p {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /*DOOM*/
 /*---------------------------------------------------------------------------------------------*/
@@ -190,15 +401,15 @@ h1, h2 {
 /* Marco con efecto neón */
 .neon-frame {
     position: relative;
-    padding: 10px; /* Espacio interno para el neón */
-    background-color: #000; /* Fondo negro para contraste */
-    border: 3px solid #ff0000; /* Borde rojo base */
-    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; 
+    background-color: #000; 
+    border: 3px solid #ff0000; 
+    border-radius: 10px; 
     box-shadow:
-        0 0 10px #ff0000, /* Resplandor cercano */
-        0 0 20px #ff0000, /* Resplandor medio */
-        0 0 40px #ff0000; /* Resplandor lejano */
-    animation: neon-glow 1.5s ease-in-out infinite alternate; /* Animación pulsante */
+        0 0 10px #ff0000, 
+        0 0 20px #ff0000, 
+        0 0 40px #ff0000; 
+    animation: neon-glow 1.5s ease-in-out infinite alternate; 
 }
 
 /* Animación del neón */
@@ -220,10 +431,11 @@ h1, h2 {
 /* Estilos del iframe */
 .game-iframe {
     width: 100%;
-    height: 400px; /* Ajusta la altura según necesites */
-    background-color: #000; /* Fondo negro por si hay áreas vacías */
-    border: none; /* Sin bordes adicionales */
+    height: 400px; 
+    background-color: #000; 
+    border: none;
 }
+
 /* Contenedor de botones */
 .button-container {
     display: flex;
@@ -257,6 +469,7 @@ h1, h2 {
 .game-stories {
     margin-top: 20px;
 }
+
 /*Cuadros de historia*/
 .story {
     padding: 15px;
@@ -266,9 +479,11 @@ h1, h2 {
     box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff4500;
     transition: transform 0.1s ease-in-out;
 }
+
 .story:hover {
     animation: shake 0.5s;
 }
+
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -276,6 +491,7 @@ h1, h2 {
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
 }
+
 @keyframes neonPulse {
     from {
         box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff4500;
@@ -284,6 +500,7 @@ h1, h2 {
         box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff4500;
     }
 }
+
 .story h3 {
     color: #ff0000;
     font-family: 'MetalMania';
@@ -293,103 +510,68 @@ h1, h2 {
 .hidden {
     display: none;
 }
+
 /*Títulos Doom*/
 .BodyDoom {
     font-family: 'MetalMania';
     font-size: 40px;
 }
+
 /*Subtítulos Doom*/
 .SubDoom p {
     font-family: 'Cinzel';
     font-size: 22px;
 }
 
-/* Runas flotantes */
-.runes {
-    position: fixed;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
-
-.runes.left {
-    left: 30px;
-}
-
-.runes.right {
-    right: 30px;
-}
-
-.rune {
-    width: 80px; /* Ajusta según el tamaño de tus imágenes */
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px #ff0000);
-    animation: float 10s infinite linear;
-}
-/* Brillo pulsante en las runas */
-@keyframes runeGlow {
-    0% { filter: drop-shadow(0 0 15px #ff0000); }
-    100% { filter: drop-shadow(0 0 30px #ff4500); }
-}
-
-@keyframes float {
-    0% { transform: translateY(100vh); }
-    100% { transform: translateY(-100vh); }
-}
-
-
-.runes .rune:nth-child(2) { animation-delay: 1s; }
-.runes .rune:nth-child(3) { animation-delay: 2s; }
-
-/* Cursor personalizado solo para la página de Doom */
+/* Cursor personalizado Doom */
 .doom-page {
     cursor: url('../images/cursor_doom.png') 0 0, auto;
 }
-/* Cursor para el estado de clic en la página de Doom */
+
+/* Cursor Doom clic */
 .doom-page *:active {
     cursor: url('../images/clickerDoom.png') 0 0, auto !important;
 }
-/*Cursor Pointer Doom*/
+
+/*Cursor Doom Pointer */
 .doom-page .neon-button:hover {
     cursor: url('../images/PointerDoom.png') 0 0, pointer;
 }
+
 .doom-page .nav a:hover {
     cursor: url('../images/PointerDoom.png') 0 0, pointer;
 }
-/* Doom Slayer en el lateral izquierdo */
+
+/* Doom Slayer izquierdo */
 .doom-slayer {
     position:fixed;
     top: 65%;
     left: 0;
-    transform: translateY(-50%); /* Centrar verticalmente */
-    z-index: 0; /* Para que las runas queden por encima */
+    transform: translateY(-50%); 
+    z-index: 0; 
 }
 
 .doom-slayer img {
-    max-height: 60vh; /* Limita la altura para que no se salga de la pantalla */
+    max-height: 60vh; 
     width: auto;
-    opacity: 0.8; /* Sutil transparencia para que no domine demasiado */
-    filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */
+    opacity: 0.8; 
+    filter: drop-shadow(0 0 10px #ff0000); 
 }
 
-/* Cyber Demon en el lateral derecho */
+/* Cyber Demon derecho */
 .cyber-demon {
     position: fixed;
     top: 65%;
     right: 0;
-    transform: translateY(-50%); /* Centrar verticalmente */
-    z-index: 0; /* Para que las runas queden por encima */
+    transform: translateY(-50%); 
+    z-index: 0; 
 }
 
 .cyber-demon img {
-    max-height: 60vh; /* Limita la altura para que no se salga de la pantalla */
+    max-height: 60vh; 
     width: auto;
-    opacity: 0.8; /* Sutil transparencia */
-    filter: drop-shadow(0 0 10px #ff0000); /* Brillo rojo neón */
+    opacity: 0.8; 
+    filter: drop-shadow(0 0 10px #ff0000); 
 }
 
 /* Efecto al pasar el ratón */
@@ -397,12 +579,13 @@ h1, h2 {
     animation: pulseGlow 0.5s infinite alternate;
     filter: drop-shadow(0 0 20px #ff0000);
 }
+
 /*Reproductor Doom*/
 .music-player {
     max-width: 800px;
     margin: 20px auto;
     padding: 0;
-    background: none; /* Quitamos el fondo base, lo manejaremos con .player-background */
+    background: none; 
     border: none;
     box-shadow: none;
     text-align: center;
@@ -411,7 +594,7 @@ h1, h2 {
 
 .player-background {
     background: url('../images/CastleDoom.jpeg') no-repeat center center;
-    background-size: cover; /* Escala la imagen para que cubra todo el contenedor */
+    background-size: cover; 
     border: 3px solid #ff0000;
     border-radius: 15px;
     padding: 20px;
@@ -424,7 +607,7 @@ h1, h2 {
     animation: pulseGlow 2s infinite alternate;
 }
 
-/* Efecto de fondo con fuego infernal */
+/* Efecto fondo */
 .player-background::before {
     content: '';
     position: absolute;
@@ -440,7 +623,7 @@ h1, h2 {
 /* Ícono decorativo del Doom Slayer */
 .player-decor {
     position: absolute;
-    top: 10px; /* Movemos hacia abajo para que no se recorte */
+    top: 10px; 
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
@@ -463,7 +646,7 @@ h1, h2 {
 .music-player h3 {
     color: #ff6a00;
     font-size: 35px;
-    margin: 60px 0 15px; /* Aumentamos el margin-top para dejar espacio al ícono */
+    margin: 60px 0 15px; 
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
     font-family: 'MetalMania', 'Anton', sans-serif;
     letter-spacing: 2px;
@@ -503,7 +686,7 @@ h1, h2 {
     transform: scale(0.95);
 }
 
-/* Efecto de fuego en los botones */
+/* Efecto en los botones */
 .control-button::before {
     content: '';
     position: absolute;
@@ -583,7 +766,7 @@ h1, h2 {
     background: #ff0000;
 }
 
-/* Animaciones épicas */
+/* Animaciones */
 @keyframes pulseGlow {
     0% { box-shadow: 0 0 20px #ff0000; }
     100% { box-shadow: 0 0 40px #ff0000; }
@@ -594,163 +777,11 @@ h1, h2 {
     50% { transform: scale(1.05); opacity: 0.7; }
     100% { transform: scale(1); opacity: 0.5; }
 }
-/* Galería de enemigos */
-.enemy-gallery {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    background: linear-gradient(45deg, #222, #111);
-    border: 3px solid #ff0000;
-    border-radius: 5px;
-    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* Título de la galería */
-.enemy-gallery h2 {
-    color: #ff0000;
-    font-family: 'Cinzel', serif;
-    font-size: 40px;
-    text-align: center;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-    margin-bottom: 30px;
-}
-
-/* Cuadrícula de enemigos */
-.enemy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Más espacio para cada enemigo */
-    gap: 30px; /* Más separación entre los elementos */
-    width: 100%;
-}
-
-/* Cada enemigo */
-.enemy-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #111;
-    border: 2px solid #ff0000;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px #ff0000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* Efecto al pasar el ratón */
-.enemy-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
-}
-
-/* Imagen del enemigo */
-.enemy-image img {
-    width: 100%;
-    height: auto; /* Permite que la imagen mantenga su proporción */
-    max-height: 300px; /* Limita la altura máxima */
-    object-fit: contain; /* Asegura que la imagen se vea completa */
-    filter: grayscale(80%) brightness(50%); /* Inicialmente apagada */
-    transition: filter 0.5s ease;
-}
-
-/* Contenedor de la imagen */
-.enemy-image {
-    position: relative;
-    width: 100%;
-    max-width: 300px; /* Tamaño adecuado para las imágenes */
-    margin-bottom: 15px;
-}
-
-/* Fondo de energía demoníaca */
-.enemy-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: -1;
-}
-
-/* Overlay con descripción */
-.enemy-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    padding: 10px;
-    text-align: center;
-}
-
-.enemy-overlay h3 {
-    color: #ff0000;
-    font-family: 'Metal Mania', sans-serif;
-    font-size: 20px;
-    text-shadow: 0 0 5px #ff0000;
-    margin-bottom: 5px;
-}
-
-.enemy-overlay p {
-    font-family: 'Cinzel', serif;
-    font-size: 14px;
-}
-/* Efecto al pasar el ratón */
-.enemy-item:hover .enemy-image img {
-    filter: grayscale(0%) brightness(100%); /* Se ilumina */
-}
-
-.enemy-item:hover .enemy-bg {
-    opacity: 1; /* Revela el fondo de energía */
-    animation: pulseGlow 1s infinite alternate;
-}
-
-/* Efecto al pasar el ratón */
-.enemy-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
-}
-.enemy-item:hover img {
-    filter: grayscale(0%) brightness(100%); /* Se ilumina */
-}
-
-.enemy-item:hover .enemy-overlay {
-    opacity: 1; /* Revela la descripción */
-}
-/* Información del enemigo */
-.enemy-info {
-    text-align: center;
-    color: #fff;
-}
-
-.enemy-info h3 {
-    color: #ff6200;
-    font-family: 'MetalMania', sans-serif;
-    font-size: 30px;
-    text-shadow: 0 0 5px #ff0000;
-    margin-bottom: 10px;
-}
-
-.enemy-info p {
-    font-family: 'Cinzel', serif;
-    font-size: 16px;
-    line-height: 1.5;
-}
 /*---------------------------------------------------------------------------------------------*/
 /*WOLF3D*/
 /*---------------------------------------------------------------------------------------------*/
+
 /*Fuentes*/
 @font-face {
     font-family: "Jersey 20";
@@ -774,6 +805,7 @@ h1, h2 {
     border-radius: 3px;
 
 }
+
 /*Enlaces*/
 #indiceW3D a {
     text-decoration: none;
@@ -785,6 +817,7 @@ h1, h2 {
 #indiceW3D a:visited {
     color:gray;
 }
+
 /*Cabecera de los articulos*/
 #W3D h2 {
     font-size: 20pt;
@@ -794,6 +827,7 @@ h1, h2 {
     border: 3px solid #1a1a1a;
     border-radius: 10px;
 }
+
 /*Articulos*/
 #W3D article {
     position: inherit;
@@ -808,6 +842,7 @@ h1, h2 {
     border-radius: 3px;
     box-shadow: -5px 8px #1a1a1a;
 }
+
 /*Enlace del articulo 3*/
 #a3 a {
     color: RED;
@@ -815,6 +850,7 @@ h1, h2 {
 #a3 a:hover {
     color: GREEN;
 }
+
 /*El gif de la pagina*/
 #raycastingGif{
     padding: inherit;
@@ -825,6 +861,7 @@ h1, h2 {
     border-radius: 5px;
     box-shadow: -5px 8px #1a1a1a;
 }
+
 /*Iluminacion*/
 #luz::after {
     content: "";
@@ -837,6 +874,7 @@ h1, h2 {
         opacity: .50;
     z-index: -1;
 }
+
 /*Mensaje*/
 #juega {
     position: inherit;
@@ -848,6 +886,7 @@ h1, h2 {
     background: #1a1a1abb;
     text-align: center;
 }
+
 /*iFrame juego*/
 #juegoW3D {
     border: none;
@@ -880,11 +919,10 @@ h1, h2 {
 #body-alice {
     cursor: url('../images/espada_vorpal.png'), auto;
     background-image: url('../images/alice-fondo.jpeg'); 
-    background-size: cover; /* cubrir toda la pantalla */
+    background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed; /* Fija la imagen al hacer scroll */
-    
+    background-attachment: fixed;     
 }
 
 .alice-game-info, .alice-play-area {
@@ -910,7 +948,7 @@ h1, h2 {
 }
 
 .contenido-Alice {
-    display: flex; /* Usamos flex para que el contenido se acomode dinámicamente */
+    display: flex; 
     align-items: flex-start;
     gap: 15px;
 }
@@ -987,7 +1025,6 @@ h1, h2 {
 /*index*/
 /*---------------------------------------------------------------------------------------------*/
 .index-page {
-    font-family: 'Metal Mania', sans-serif;
     background: linear-gradient(45deg, #1a1a1a, #2a0000);
     background-size: 400% 400%;
     color: #fff;
@@ -996,14 +1033,13 @@ h1, h2 {
     animation: infernalSky 30s infinite;
 }
 
-/* Animación del cielo infernal */
+/* Animación */
 @keyframes infernalSky {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
     100% { background-position: 0% 0%; }
 }
 
-/* Nubes negras en movimiento */
 .index-page::before {
     content: '';
     position: fixed;
@@ -1103,9 +1139,9 @@ h1, h2 {
 /* Tabla de categorías con animación */
 .category-table {
     width: 100%;
-    max-width: 100%; /* Asegura que la tabla no exceda el contenedor */
+    max-width: 100%; 
     border-collapse: collapse;
-    margin: 20px 0; /* Centra verticalmente, elimina márgenes laterales */
+    margin: 20px 0; 
     background: linear-gradient(45deg, #222, #111);
     color: #fff;
     animation: tableFadeIn 1s ease-in-out;
@@ -1113,18 +1149,18 @@ h1, h2 {
 }
 
 .category-table th, .category-table td {
-    padding: 15px; /* Más espaciado para que sea más legible */
+    padding: 15px; 
     text-align: left;
     border: 2px solid #ff0000;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-table th {
-    background: linear-gradient(45deg, #000, #333); /* Fondo degradado para los encabezados */
-    font-family: 'Cormorant', sans-serif; /* Fuente temática */
+    background: linear-gradient(45deg, #000, #333); 
+    font-family: 'Cormorant', sans-serif; 
     font-size: 25px;
     text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
-    color: #ff0000; /* Texto rojo */
+    color: #ff0000; 
 }
 
 .category-table td {
@@ -1140,9 +1176,9 @@ h1, h2 {
 }
 
 .category-table tr:hover {
-    background: linear-gradient(45deg, #333, #444); /* Fondo más claro al pasar el ratón */
-    transform: scale(1.02); /* Ligeramente más grande */
-    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; /* Brillo neón más intenso */
+    background: linear-gradient(45deg, #333, #444); 
+    transform: scale(1.02); 
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; 
 }
 
 /* Animaciones */
@@ -1185,7 +1221,7 @@ h1, h2 {
     box-shadow: 0 0 15px #ff0000;
 }
 
-/* Animaciones generales (puedes copiar las que ya tienes en style.css) */
+/* Animaciones generales */
 @keyframes portalSpin {
     0% { background-position: 0% 0%; }
     100% { background-position: 360% 360%; }
@@ -1209,25 +1245,6 @@ h1, h2 {
         text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000;
     }
 }
-
-/* Runas flotantes */
-
-.runes.left-1 {
-    left: 30px;
-}
-
-.runes.left-2 {
-    left: 100px;
-}
-
-.piezas-right-1 {
-    right: 30px;
-}
-
-.piezas-right-2 {
-    right: 50px;
-}
-
 
 /* Pie de página */
 .index-page .footer {
@@ -1264,16 +1281,16 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Limita el ancho total */
+    max-width: 1200px; 
     margin: 30px auto;
-    overflow: hidden; /* Evita que las imágenes desborden */
+    overflow: hidden; 
 }
 
 /* Estilo de cada panel */
 .panel {
     flex: 1;
     height: 400px;
-    transition: flex 0.5s ease, opacity 0.5s ease, filter 0.5s ease; /* Añadimos transiciones para opacidad y filtro */
+    transition: flex 0.5s ease, opacity 0.5s ease, filter 0.5s ease; 
 }
 
 /* Enlace del panel */
@@ -1293,28 +1310,29 @@ h1, h2 {
 
 /* Efecto al pasar el ratón */
 .panel:hover {
-    flex: 2; /* El panel se expande al pasar el ratón */
+    flex: 2; 
 }
 .panel:hover img {
-    transform: scale(1.1); /* La imagen se agranda ligeramente para un efecto adicional */
+    transform: scale(1.1); 
 }
 
 /* Las imágenes no seleccionadas se comprimen */
 .game-panels:hover .panel {
     flex: 0.5;
     opacity: 0.7;
-    filter: blur(3px) grayscale(80%) sepia(50%) brightness(50%); /* Añade un efecto monocromático */
+    filter: blur(3px) grayscale(80%) sepia(50%) brightness(50%); 
 }
 
 .game-panels:hover .panel:hover {
     flex: 2;
-    opacity: 1; /* Mantiene la opacidad completa */
-    filter: none; /* Sin desenfoque */
+    opacity: 1; 
+    filter: none; 
 }
 
 .index-page .header .logo:active {
-    transform: scale(0.95); /* Se "hunde" ligeramente al hacer clic */
+    transform: scale(0.95); 
 }
+
 /* Sección de reseñas */
 .reviews-section {
     padding: 20px;
@@ -1360,7 +1378,7 @@ h1, h2 {
     box-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000;
 }
 
-/* Invierte la disposición (imagen a la derecha, texto a la izquierda) */
+/* Invierte la disposición */
 .review-item.reverse {
     flex-direction: row-reverse;
 }

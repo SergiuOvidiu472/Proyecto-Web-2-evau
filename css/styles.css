@@ -879,6 +879,22 @@ h1, h2 {
 
 #body-alice {
     cursor: url('../images/espada_vorpal.png'), auto;
+    background-image: url('../images/alice-fondo.jpeg'); 
+    background-size: cover; /* cubrir toda la pantalla */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; /* Fija la imagen al hacer scroll */
+    
+}
+
+.alice-game-info, .alice-play-area {
+    font-family: 'fuente-alice', sans-seriff;
+    font-size: 25px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; 
+    background-color: #333; 
+    border-radius: 5px;
 }
 
 .imagen-Alice {
@@ -946,7 +962,6 @@ h1, h2 {
     margin-bottom: 30px;
 }
 
-/* Información del enemigo */
 .alice-enemy-info {
     font-family: 'fuente-alice';
     text-align: center;

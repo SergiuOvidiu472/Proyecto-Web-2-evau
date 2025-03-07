@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <!--Metadatos del autor-->
     <meta name="author" content="Lucía, Javier, Sergio">
     <meta name="description" contet="Una encuesta sobre videojuegos">
     <meta name="keywords" content="Encuesta, Videojuegos">
-    
     <!--Metadatos del juego de caracteres y vista-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!------------------------------------------------------->
     <title>Formulario</title>
     <link rel="stylesheet" href="../css/styles.css">
-    
 </head>
 <body class="formulario-page">
-
     <!--Header-->
     <header class="header">
         <img src="../images/formularioLogo.png" alt="Logo del formulario" class="logo">
@@ -31,16 +26,12 @@
               </ul>
         </nav>
     </header>
-
     <main class="formularioMain">
         <form action="index.html" method="POST">
-        
             <section id="cajaDeTexto">
                 <label>¿Cuál es tu juego favorito?</label>
                 <input type="text" maxlength="50" size="50"/>
             </section>
-
-
             <section id="radio">
                 <fieldset>
                 <legend>¿Con qué frecuencia juegas?</legend>
@@ -81,17 +72,14 @@
                     </div>
                 </fieldset>
             </section>
-
             <section id="meses">
                 <label>¿A partir de qué año empezaste a jugar? (mes aproximado)</label>
                 <input type="month" placeholder="YYYY/MM"/>
             </section>
-
             <section id="numeros">
                 <label>¿Cuánto te gastas al año en juegos?</label>
                 <input type="number" max="3000"/>
             </section>
-
             <section id="Desplegable">
                 <label>¿Cual es tu plataforma de videojuegos de preferencia?</label>
                 <select name="opciones">
@@ -102,7 +90,6 @@
                     <option>Prime gaming</option>
                 </select>
             </section>
-    
             <section id="checkboxes">
                 <label>¿Cuáles son tus estilos de videojuegos favoritos?</label></br>
                 <label>FPS</label>
@@ -116,24 +103,21 @@
                 <label>Estrategias de tiempo (RTS)</label>
                 <input type="checkbox" name="RTS"></br>
             </section>
-    
             <section id="areaDeTexto">
                 <label>Que es lo que mas aprecias de los videojuegos</label></br>
                 <textarea style="resize:none" id="areaTexto" name="areaTexto" rows="20" cols="80" resize:none ></textarea></br>
             </section>
-    
-    
             <section id="archivos">
                 <label>Puedes subir capturas de pantallas de tus videojuegos aqui</label></br>
                 <input type="file" name="captura"/></br>
             </section>
-            
             <section id="botones">
                 <input type="submit"/></br>
                 <input type="reset"/></br>
             </section>
         </form>
     </main>
+    <!-- Pié de página -->
     <footer class="footer">
         <p>&copy; 2025 - Proyecto de Lenguajes de Marcas</p>
     </footer>
